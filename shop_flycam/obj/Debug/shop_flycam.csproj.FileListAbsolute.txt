@@ -62,3 +62,6 @@ D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\Bunifu.
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.form.frmLogin.resources
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.csproj.CopyComplete
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\alphablendtextbox.dll
+D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\Computer.dll
+D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.form.frmForgotPassword.resources
+D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.frmMain.resources
