@@ -132,6 +132,9 @@
     <Reference Include="Computer">
       <HintPath>..\..\..\..\Library\c#\Computer\Computer.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.9, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -145,6 +148,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="form\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\frmForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,12 +165,6 @@
     </Compile>
     <Compile Include="form\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,16 +212,25 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QLShopFlycam.mdf</DependentUpon>
     </Content>
+    <Content Include="res\cart-add.png" />
     <Content Include="res\close.png" />
     <Content Include="res\email.png" />
     <Content Include="res\eye-hidden.png" />
     <Content Include="res\eye-hide.png" />
     <Content Include="res\eye-view.png" />
     <Content Include="res\hide.png" />
+    <Content Include="res\id-card.png" />
     <Content Include="res\lock.png" />
+    <Content Include="res\log-out.png" />
     <Content Include="res\logo.png" />
+    <Content Include="res\male-female.png" />
+    <Content Include="res\plane.png" />
+    <Content Include="res\user-account.png" />
     <Content Include="res\user.png" />
     <Content Include="res\view.png" />
+    <Content Include="res\waninoko.jpg" />
+    <Content Include="res\welcome-emoji.gif" />
+    <Content Include="res\welcome.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

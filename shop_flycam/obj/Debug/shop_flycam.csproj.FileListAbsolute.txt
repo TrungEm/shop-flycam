@@ -3,7 +3,6 @@ D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\QLShopF
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\shop_flycam.exe.config
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\shop_flycam.exe
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\shop_flycam.pdb
-D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.csproj.AssemblyReference.cache
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.Properties.Resources.resources
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.csproj.GenerateResource.cache
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.csproj.CoreCompileInputs.cache
@@ -64,4 +63,6 @@ D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_fl
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\alphablendtextbox.dll
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\Computer.dll
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.form.frmForgotPassword.resources
-D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.frmMain.resources
+D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\bin\Debug\Guna.UI2.dll
+D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.form.frmMain.resources
+D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.csproj.AssemblyReference.cache

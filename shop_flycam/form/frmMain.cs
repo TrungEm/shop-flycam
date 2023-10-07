@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace shop_flycam
+namespace shop_flycam.form
 {
     public partial class frmMain : Form
     {
@@ -16,5 +16,7 @@ namespace shop_flycam
         {
             InitializeComponent();
         }
+
+        
     }
 }

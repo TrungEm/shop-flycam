@@ -177,11 +177,11 @@ namespace shop_flycam.form
             this.lblForgotPassword.AutoSize = true;
             this.lblForgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPassword.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPassword.ForeColor = System.Drawing.Color.White;
-            this.lblForgotPassword.Location = new System.Drawing.Point(196, 453);
+            this.lblForgotPassword.Location = new System.Drawing.Point(210, 450);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(194, 28);
+            this.lblForgotPassword.Size = new System.Drawing.Size(180, 26);
             this.lblForgotPassword.TabIndex = 0;
             this.lblForgotPassword.Text = "Quên mật khẩu?";
             this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
@@ -238,6 +238,7 @@ namespace shop_flycam.form
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(390, 38);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "1234";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // pictureBox1
@@ -282,6 +283,7 @@ namespace shop_flycam.form
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(441, 46);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "admin";
             // 
             // bunifuElipse1
             // 
