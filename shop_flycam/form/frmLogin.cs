@@ -76,8 +76,14 @@ namespace shop_flycam.form
 
                 if (data.Rows[0][0].ToString() == "1")
                 {
+                    SqlCommand cmGetName = new SqlCommand("SELECT fullname FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "'", conn);
+                    addData.SelectCommand = cmGetName;
+                    addData.Fill(data);
+
                     frmMain formMain = new frmMain();
+                    formMain.name = data.Rows[1][1].ToString();
                     formMain.ShowDialog();
+
                     emptyBox();
 
                 } else
