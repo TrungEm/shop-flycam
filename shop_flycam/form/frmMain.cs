@@ -47,41 +47,47 @@ namespace shop_flycam.form
         {
             moveActive(btnDashboard);
             dashboard.Visible = true;
+            flycam.Visible = false;
         }
 
         private void btnFlycam_Click(object sender, EventArgs e)
         {
             moveActive(btnFlycam);
             dashboard.Visible = false;
+            flycam.Visible = true;
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             moveActive(btnOrder);
             dashboard.Visible = false;
+            flycam.Visible = false;
         }
 
         private void btnBuyer_Click(object sender, EventArgs e)
         {
             moveActive(btnBuyer);
             dashboard.Visible = false;
+            flycam.Visible = false;
         }
 
         private void btnSalesman_Click(object sender, EventArgs e)
         {
             moveActive(btnSalesman);
             dashboard.Visible = false;
+            flycam.Visible = false;
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
             moveActive(btnAccount);
             dashboard.Visible = false;
+            flycam.Visible = false;
         }
 
         private void picClose_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         

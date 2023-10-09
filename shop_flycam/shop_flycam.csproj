@@ -153,6 +153,12 @@
     <Compile Include="control\dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\flycam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\flycam.Designer.cs">
+      <DependentUpon>flycam.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="control\dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\flycam.resx">
+      <DependentUpon>flycam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
@@ -217,9 +226,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QLShopFlycam.mdf</DependentUpon>
     </Content>
+    <Content Include="res\add.png" />
     <Content Include="res\cart-add.png" />
     <Content Include="res\cart-light.png" />
+    <Content Include="res\check.png" />
     <Content Include="res\close.png" />
+    <Content Include="res\delete-2.png" />
+    <Content Include="res\delete.png" />
+    <Content Include="res\edit.png" />
     <Content Include="res\email.png" />
     <Content Include="res\eye-hidden.png" />
     <Content Include="res\eye-hide.png" />
@@ -234,6 +248,8 @@
     <Content Include="res\male-female.png" />
     <Content Include="res\plane-light.png" />
     <Content Include="res\plane.png" />
+    <Content Include="res\save.png" />
+    <Content Include="res\upload.png" />
     <Content Include="res\user-account-light.png" />
     <Content Include="res\user-account.png" />
     <Content Include="res\user.png" />
