@@ -34,16 +34,24 @@ namespace shop_flycam.control
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(flycam));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(flycam));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,6 +62,7 @@ namespace shop_flycam.control
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -77,14 +86,6 @@ namespace shop_flycam.control
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -117,6 +118,20 @@ namespace shop_flycam.control
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1373, 512);
             this.pnlMain.TabIndex = 6;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
+            this.textBox8.Location = new System.Drawing.Point(236, 53);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(348, 43);
+            this.textBox8.TabIndex = 8;
             // 
             // dgvProduct
             // 
@@ -168,6 +183,71 @@ namespace shop_flycam.control
             this.dgvProduct.RowTemplate.Height = 28;
             this.dgvProduct.Size = new System.Drawing.Size(1353, 403);
             this.dgvProduct.TabIndex = 8;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column1.FillWeight = 60F;
+            this.Column1.HeaderText = "Mã Flycam";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column2.HeaderText = "Tên Flycam";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column3.FillWeight = 60F;
+            this.Column3.HeaderText = "Số lượng tồn";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column4.FillWeight = 50F;
+            this.Column4.HeaderText = "Giá nhập";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column5.FillWeight = 50F;
+            this.Column5.HeaderText = "Giá bán";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column6.HeaderText = "Ghi chú";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
+            this.label3.Location = new System.Drawing.Point(13, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(214, 30);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tìm kiếm sản phẩm";
             // 
             // panel7
             // 
@@ -291,12 +371,31 @@ namespace shop_flycam.control
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.button6);
             this.panel10.Controls.Add(this.button3);
             this.panel10.Controls.Add(this.button1);
             this.panel10.Location = new System.Drawing.Point(894, 105);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(469, 96);
             this.panel10.TabIndex = 8;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(330, 10);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(150, 70);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "      Bỏ qua";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -308,7 +407,7 @@ namespace shop_flycam.control
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(269, 10);
+            this.button3.Location = new System.Drawing.Point(170, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 70);
             this.button3.TabIndex = 0;
@@ -327,7 +426,7 @@ namespace shop_flycam.control
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(14)))), ((int)(((byte)(31)))));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(48, 10);
+            this.button1.Location = new System.Drawing.Point(3, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 70);
             this.button1.TabIndex = 0;
@@ -537,7 +636,7 @@ namespace shop_flycam.control
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(269, 10);
+            this.button4.Location = new System.Drawing.Point(298, 10);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 70);
             this.button4.TabIndex = 0;
@@ -554,7 +653,7 @@ namespace shop_flycam.control
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(48, 10);
+            this.button2.Location = new System.Drawing.Point(68, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 70);
             this.button2.TabIndex = 0;
@@ -577,85 +676,6 @@ namespace shop_flycam.control
             // 
             this.bunifuElipse3.ElipseRadius = 15;
             this.bunifuElipse3.TargetControl = this.pnlMain;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.label3.Location = new System.Drawing.Point(13, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(321, 45);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tìm kiếm sản phẩm";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox8.Location = new System.Drawing.Point(236, 53);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(348, 43);
-            this.textBox8.TabIndex = 8;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.FillWeight = 60F;
-            this.Column1.HeaderText = "Mã Flycam";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.HeaderText = "Tên Flycam";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column3.FillWeight = 60F;
-            this.Column3.HeaderText = "Số lượng tồn";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column4.FillWeight = 50F;
-            this.Column4.HeaderText = "Giá nhập";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column5.FillWeight = 50F;
-            this.Column5.HeaderText = "Giá bán";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Column6.HeaderText = "Ghi chú";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
             // 
             // flycam
             // 
@@ -738,5 +758,6 @@ namespace shop_flycam.control
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button button6;
     }
 }

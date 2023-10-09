@@ -16,12 +16,13 @@ namespace shop_flycam.control
         {
             InitializeComponent();
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 5; i++)
             {
                 dgvProduct.Rows.Add(new object[] { "ProDJK2019", "Flycam DJI Air 2S Smart Controller", "20", "5600000", "7200000", "Hàng mới nhập về" });
             }
 
             dgvProduct.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
         }
+
     }
 }

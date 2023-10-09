@@ -53,6 +53,7 @@ namespace shop_flycam.form
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.buyer = new shop_flycam.control.buyer();
             this.flycam = new shop_flycam.control.flycam();
             this.dashboard = new shop_flycam.control.dashboard();
             this.panelHeader.SuspendLayout();
@@ -358,6 +359,7 @@ namespace shop_flycam.form
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.buyer);
             this.panel1.Controls.Add(this.flycam);
             this.panel1.Controls.Add(this.dashboard);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -370,6 +372,16 @@ namespace shop_flycam.form
             // 
             this.bunifuElipse3.ElipseRadius = 15;
             this.bunifuElipse3.TargetControl = this.pnlCenter;
+            // 
+            // buyer
+            // 
+            this.buyer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buyer.Location = new System.Drawing.Point(0, 0);
+            this.buyer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buyer.Name = "buyer";
+            this.buyer.Size = new System.Drawing.Size(1364, 857);
+            this.buyer.TabIndex = 2;
+            this.buyer.Visible = false;
             // 
             // flycam
             // 
@@ -451,5 +463,6 @@ namespace shop_flycam.form
         private System.Windows.Forms.Panel panel1;
         private control.dashboard dashboard;
         private control.flycam flycam;
+        private control.buyer buyer;
     }
 }

@@ -48,6 +48,7 @@ namespace shop_flycam.form
             moveActive(btnDashboard);
             dashboard.Visible = true;
             flycam.Visible = false;
+            buyer.Visible = false;
         }
 
         private void btnFlycam_Click(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace shop_flycam.form
             moveActive(btnFlycam);
             dashboard.Visible = false;
             flycam.Visible = true;
+            buyer.Visible = false;
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -62,6 +64,7 @@ namespace shop_flycam.form
             moveActive(btnOrder);
             dashboard.Visible = false;
             flycam.Visible = false;
+            buyer.Visible = false;
         }
 
         private void btnBuyer_Click(object sender, EventArgs e)
@@ -69,6 +72,7 @@ namespace shop_flycam.form
             moveActive(btnBuyer);
             dashboard.Visible = false;
             flycam.Visible = false;
+            buyer.Visible = true;
         }
 
         private void btnSalesman_Click(object sender, EventArgs e)
@@ -76,6 +80,7 @@ namespace shop_flycam.form
             moveActive(btnSalesman);
             dashboard.Visible = false;
             flycam.Visible = false;
+            buyer.Visible = false;
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
@@ -83,6 +88,7 @@ namespace shop_flycam.form
             moveActive(btnAccount);
             dashboard.Visible = false;
             flycam.Visible = false;
+            buyer.Visible = false;
         }
 
         private void picClose_Click(object sender, EventArgs e)

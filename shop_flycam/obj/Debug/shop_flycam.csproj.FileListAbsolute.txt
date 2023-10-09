@@ -66,3 +66,4 @@ D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_fl
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.form.frmMain.resources
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.control.dashboard.resources
 D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.control.flycam.resources
+D:\Workspace\university\2023\LT-WINDOW\shop_flycam\shop_flycam\obj\Debug\shop_flycam.control.buyer.resources

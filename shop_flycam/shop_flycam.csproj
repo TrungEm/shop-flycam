@@ -147,6 +147,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\buyer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\buyer.Designer.cs">
+      <DependentUpon>buyer.cs</DependentUpon>
+    </Compile>
     <Compile Include="control\dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="control\buyer.resx">
+      <DependentUpon>buyer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control\dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +257,7 @@
     <Content Include="res\male-female.png" />
     <Content Include="res\plane-light.png" />
     <Content Include="res\plane.png" />
+    <Content Include="res\revision.png" />
     <Content Include="res\save.png" />
     <Content Include="res\upload.png" />
     <Content Include="res\user-account-light.png" />
