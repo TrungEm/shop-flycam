@@ -171,6 +171,12 @@
     <Compile Include="control\salesman.Designer.cs">
       <DependentUpon>salesman.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\salesman.resx">
       <DependentUpon>salesman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\user.resx">
+      <DependentUpon>user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
@@ -268,6 +277,7 @@
     <Content Include="res\plane.png" />
     <Content Include="res\revision.png" />
     <Content Include="res\save.png" />
+    <Content Include="res\search.png" />
     <Content Include="res\upload.png" />
     <Content Include="res\user-account-light.png" />
     <Content Include="res\user-account.png" />

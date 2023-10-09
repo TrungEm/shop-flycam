@@ -52,11 +52,12 @@ namespace shop_flycam.form
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.user = new shop_flycam.control.user();
+            this.salesman = new shop_flycam.control.salesman();
             this.buyer = new shop_flycam.control.buyer();
             this.flycam = new shop_flycam.control.flycam();
             this.dashboard = new shop_flycam.control.dashboard();
-            this.salesman = new shop_flycam.control.salesman();
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -360,6 +361,7 @@ namespace shop_flycam.form
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.user);
             this.panel1.Controls.Add(this.salesman);
             this.panel1.Controls.Add(this.buyer);
             this.panel1.Controls.Add(this.flycam);
@@ -370,10 +372,25 @@ namespace shop_flycam.form
             this.panel1.Size = new System.Drawing.Size(909, 571);
             this.panel1.TabIndex = 0;
             // 
-            // bunifuElipse3
+            // user
             // 
-            this.bunifuElipse3.ElipseRadius = 15;
-            this.bunifuElipse3.TargetControl = this.pnlCenter;
+            this.user.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.user.Location = new System.Drawing.Point(0, 0);
+            this.user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(909, 571);
+            this.user.TabIndex = 4;
+            this.user.Visible = false;
+            // 
+            // salesman
+            // 
+            this.salesman.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.salesman.Location = new System.Drawing.Point(0, 0);
+            this.salesman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.salesman.Name = "salesman";
+            this.salesman.Size = new System.Drawing.Size(909, 571);
+            this.salesman.TabIndex = 3;
+            this.salesman.Visible = false;
             // 
             // buyer
             // 
@@ -407,15 +424,10 @@ namespace shop_flycam.form
             this.dashboard.Size = new System.Drawing.Size(909, 571);
             this.dashboard.TabIndex = 0;
             // 
-            // salesman
+            // bunifuElipse3
             // 
-            this.salesman.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.salesman.Location = new System.Drawing.Point(0, 0);
-            this.salesman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.salesman.Name = "salesman";
-            this.salesman.Size = new System.Drawing.Size(1364, 857);
-            this.salesman.TabIndex = 3;
-            this.salesman.Visible = false;
+            this.bunifuElipse3.ElipseRadius = 15;
+            this.bunifuElipse3.TargetControl = this.pnlCenter;
             // 
             // frmMain
             // 
@@ -477,5 +489,6 @@ namespace shop_flycam.form
         private control.flycam flycam;
         private control.buyer buyer;
         private control.salesman salesman;
+        private control.user user;
     }
 }
