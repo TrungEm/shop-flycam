@@ -56,6 +56,7 @@ namespace shop_flycam.form
             this.buyer = new shop_flycam.control.buyer();
             this.flycam = new shop_flycam.control.flycam();
             this.dashboard = new shop_flycam.control.dashboard();
+            this.salesman = new shop_flycam.control.salesman();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -359,6 +360,7 @@ namespace shop_flycam.form
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.salesman);
             this.panel1.Controls.Add(this.buyer);
             this.panel1.Controls.Add(this.flycam);
             this.panel1.Controls.Add(this.dashboard);
@@ -379,7 +381,7 @@ namespace shop_flycam.form
             this.buyer.Location = new System.Drawing.Point(0, 0);
             this.buyer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buyer.Name = "buyer";
-            this.buyer.Size = new System.Drawing.Size(1364, 857);
+            this.buyer.Size = new System.Drawing.Size(909, 571);
             this.buyer.TabIndex = 2;
             this.buyer.Visible = false;
             // 
@@ -404,6 +406,16 @@ namespace shop_flycam.form
             this.dashboard.Name = "dashboard";
             this.dashboard.Size = new System.Drawing.Size(909, 571);
             this.dashboard.TabIndex = 0;
+            // 
+            // salesman
+            // 
+            this.salesman.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.salesman.Location = new System.Drawing.Point(0, 0);
+            this.salesman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.salesman.Name = "salesman";
+            this.salesman.Size = new System.Drawing.Size(1364, 857);
+            this.salesman.TabIndex = 3;
+            this.salesman.Visible = false;
             // 
             // frmMain
             // 
@@ -464,5 +476,6 @@ namespace shop_flycam.form
         private control.dashboard dashboard;
         private control.flycam flycam;
         private control.buyer buyer;
+        private control.salesman salesman;
     }
 }

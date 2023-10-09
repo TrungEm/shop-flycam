@@ -165,6 +165,12 @@
     <Compile Include="control\flycam.Designer.cs">
       <DependentUpon>flycam.cs</DependentUpon>
     </Compile>
+    <Compile Include="control\salesman.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\salesman.Designer.cs">
+      <DependentUpon>salesman.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="control\flycam.resx">
       <DependentUpon>flycam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\salesman.resx">
+      <DependentUpon>salesman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
