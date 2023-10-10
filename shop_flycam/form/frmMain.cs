@@ -48,6 +48,7 @@ namespace shop_flycam.form
             moveActive(btnDashboard);
             dashboard.Visible = true;
             flycam.Visible = false;
+            order.Visible = false;
             buyer.Visible = false;
             salesman.Visible = false;
             user.Visible = false;
@@ -58,6 +59,7 @@ namespace shop_flycam.form
             moveActive(btnFlycam);
             dashboard.Visible = false;
             flycam.Visible = true;
+            order.Visible = false;
             buyer.Visible = false;
             salesman.Visible = false;
             user.Visible = false;
@@ -68,6 +70,7 @@ namespace shop_flycam.form
             moveActive(btnOrder);
             dashboard.Visible = false;
             flycam.Visible = false;
+            order.Visible = true;
             buyer.Visible = false;
             salesman.Visible = false;
             user.Visible = false;
@@ -78,6 +81,7 @@ namespace shop_flycam.form
             moveActive(btnBuyer);
             dashboard.Visible = false;
             flycam.Visible = false;
+            order.Visible = false;
             buyer.Visible = true;
             salesman.Visible = false;
             user.Visible = false;
@@ -88,6 +92,7 @@ namespace shop_flycam.form
             moveActive(btnSalesman);
             dashboard.Visible = false;
             flycam.Visible = false;
+            order.Visible = false;
             buyer.Visible = false;
             salesman.Visible = true;
             user.Visible = false;
@@ -98,6 +103,7 @@ namespace shop_flycam.form
             moveActive(btnAccount);
             dashboard.Visible = false;
             flycam.Visible = false;
+            order.Visible = false;
             buyer.Visible = false;
             salesman.Visible = false;
             user.Visible = true;

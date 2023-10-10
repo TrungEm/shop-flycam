@@ -30,11 +30,11 @@ namespace shop_flycam.control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,7 +43,12 @@ namespace shop_flycam.control
             this.label3 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvUser = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.button3 = new System.Windows.Forms.Button();
@@ -68,12 +73,8 @@ namespace shop_flycam.control
             this.button2 = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.panel10.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,7 +84,6 @@ namespace shop_flycam.control
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.pnlTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -98,7 +98,7 @@ namespace shop_flycam.control
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
             this.label3.Location = new System.Drawing.Point(13, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 45);
+            this.label3.Size = new System.Drawing.Size(117, 30);
             this.label3.TabIndex = 0;
             this.label3.Text = "Username";
             // 
@@ -129,6 +129,18 @@ namespace shop_flycam.control
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1373, 593);
             this.pnlMain.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(454, 56);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // dgvUser
             // 
@@ -179,6 +191,42 @@ namespace shop_flycam.control
             this.dgvUser.Size = new System.Drawing.Size(1353, 484);
             this.dgvUser.TabIndex = 8;
             // 
+            // Column1
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column1.FillWeight = 60F;
+            this.Column1.HeaderText = "Username";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column2.HeaderText = "Họ tên";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column3.FillWeight = 80F;
+            this.Column3.HeaderText = "Email";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column4.HeaderText = "Mật khẩu";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -204,7 +252,7 @@ namespace shop_flycam.control
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(170, 18);
+            this.button3.Location = new System.Drawing.Point(319, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 70);
             this.button3.TabIndex = 0;
@@ -233,7 +281,6 @@ namespace shop_flycam.control
             // panel10
             // 
             this.panel10.Controls.Add(this.button6);
-            this.panel10.Controls.Add(this.button3);
             this.panel10.Controls.Add(this.button1);
             this.panel10.Location = new System.Drawing.Point(894, 135);
             this.panel10.Name = "panel10";
@@ -251,7 +298,7 @@ namespace shop_flycam.control
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(330, 18);
+            this.button6.Location = new System.Drawing.Point(159, 18);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(150, 70);
             this.button6.TabIndex = 0;
@@ -300,7 +347,7 @@ namespace shop_flycam.control
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox5.Location = new System.Drawing.Point(22, 49);
+            this.textBox5.Location = new System.Drawing.Point(8, 49);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(352, 47);
@@ -313,7 +360,7 @@ namespace shop_flycam.control
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
             this.label6.Location = new System.Drawing.Point(3, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 42);
+            this.label6.Size = new System.Drawing.Size(102, 28);
             this.label6.TabIndex = 0;
             this.label6.Text = "Mật khẩu";
             // 
@@ -336,7 +383,7 @@ namespace shop_flycam.control
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox4.Location = new System.Drawing.Point(17, 49);
+            this.textBox4.Location = new System.Drawing.Point(8, 49);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(361, 47);
@@ -349,7 +396,7 @@ namespace shop_flycam.control
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
             this.label5.Location = new System.Drawing.Point(3, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 42);
+            this.label5.Size = new System.Drawing.Size(64, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "Email";
             // 
@@ -372,7 +419,7 @@ namespace shop_flycam.control
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox1.Location = new System.Drawing.Point(17, 49);
+            this.textBox1.Location = new System.Drawing.Point(8, 49);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(249, 47);
@@ -385,7 +432,7 @@ namespace shop_flycam.control
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 42);
+            this.label1.Size = new System.Drawing.Size(106, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
@@ -408,7 +455,7 @@ namespace shop_flycam.control
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox2.Location = new System.Drawing.Point(22, 49);
+            this.textBox2.Location = new System.Drawing.Point(8, 49);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(426, 47);
@@ -421,13 +468,14 @@ namespace shop_flycam.control
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 42);
+            this.label2.Size = new System.Drawing.Size(76, 28);
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ tên";
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.button4);
+            this.panel9.Controls.Add(this.button3);
             this.panel9.Controls.Add(this.button2);
             this.panel9.Location = new System.Drawing.Point(894, 3);
             this.panel9.Name = "panel9";
@@ -444,7 +492,7 @@ namespace shop_flycam.control
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(298, 10);
+            this.button4.Location = new System.Drawing.Point(159, 10);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 70);
             this.button4.TabIndex = 0;
@@ -461,7 +509,7 @@ namespace shop_flycam.control
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(68, 10);
+            this.button2.Location = new System.Drawing.Point(3, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 70);
             this.button2.TabIndex = 0;
@@ -484,54 +532,6 @@ namespace shop_flycam.control
             this.bunifuElipse2.ElipseRadius = 15;
             this.bunifuElipse2.TargetControl = this.pnlTop;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(454, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.FillWeight = 60F;
-            this.Column1.HeaderText = "Username";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.HeaderText = "Họ tên";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column3.FillWeight = 80F;
-            this.Column3.HeaderText = "Email";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column4.HeaderText = "Mật khẩu";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            // 
             // user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -542,6 +542,7 @@ namespace shop_flycam.control
             this.Size = new System.Drawing.Size(1373, 857);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.panel10.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -555,7 +556,6 @@ namespace shop_flycam.control
             this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -63,6 +63,10 @@ namespace shop_flycam.control
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,6 +77,10 @@ namespace shop_flycam.control
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.bunifuGradientPanel1.SuspendLayout();
+            this.bunifuGradientPanel2.SuspendLayout();
+            this.bunifuGradientPanel3.SuspendLayout();
+            this.bunifuGradientPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -88,10 +96,7 @@ namespace shop_flycam.control
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(132)))), ((int)(((byte)(232)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.lblQuantityOrder);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.bunifuGradientPanel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(10, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -102,6 +107,7 @@ namespace shop_flycam.control
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(220, 14);
             this.pictureBox1.Name = "pictureBox1";
@@ -112,6 +118,7 @@ namespace shop_flycam.control
             // 
             // lblQuantityOrder
             // 
+            this.lblQuantityOrder.BackColor = System.Drawing.Color.Transparent;
             this.lblQuantityOrder.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantityOrder.ForeColor = System.Drawing.Color.White;
             this.lblQuantityOrder.Location = new System.Drawing.Point(23, 46);
@@ -124,6 +131,7 @@ namespace shop_flycam.control
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(18, 126);
@@ -135,6 +143,7 @@ namespace shop_flycam.control
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 14);
@@ -158,12 +167,13 @@ namespace shop_flycam.control
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 400);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1373, 230);
+            this.panel1.Size = new System.Drawing.Size(1373, 313);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -180,7 +190,7 @@ namespace shop_flycam.control
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 19);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 45);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -190,10 +200,7 @@ namespace shop_flycam.control
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(42)))), ((int)(((byte)(202)))));
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.lblQuantityAccount);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.bunifuGradientPanel4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(1012, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -204,8 +211,9 @@ namespace shop_flycam.control
             // pictureBox4
             // 
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(222, 14);
+            this.pictureBox4.Location = new System.Drawing.Point(223, 14);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(73, 66);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -214,9 +222,10 @@ namespace shop_flycam.control
             // 
             // lblQuantityAccount
             // 
+            this.lblQuantityAccount.BackColor = System.Drawing.Color.Transparent;
             this.lblQuantityAccount.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantityAccount.ForeColor = System.Drawing.Color.White;
-            this.lblQuantityAccount.Location = new System.Drawing.Point(23, 46);
+            this.lblQuantityAccount.Location = new System.Drawing.Point(24, 46);
             this.lblQuantityAccount.Name = "lblQuantityAccount";
             this.lblQuantityAccount.Size = new System.Drawing.Size(191, 57);
             this.lblQuantityAccount.TabIndex = 0;
@@ -226,9 +235,10 @@ namespace shop_flycam.control
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(18, 126);
+            this.label12.Location = new System.Drawing.Point(19, 126);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(238, 28);
             this.label12.TabIndex = 0;
@@ -237,9 +247,10 @@ namespace shop_flycam.control
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(17, 14);
+            this.label13.Location = new System.Drawing.Point(18, 14);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(124, 32);
             this.label13.TabIndex = 0;
@@ -248,10 +259,7 @@ namespace shop_flycam.control
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(45)))));
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.lblQuantitySalesman);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.bunifuGradientPanel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(678, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -262,8 +270,9 @@ namespace shop_flycam.control
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(220, 14);
+            this.pictureBox3.Location = new System.Drawing.Point(222, 14);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(73, 66);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -272,9 +281,10 @@ namespace shop_flycam.control
             // 
             // lblQuantitySalesman
             // 
+            this.lblQuantitySalesman.BackColor = System.Drawing.Color.Transparent;
             this.lblQuantitySalesman.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantitySalesman.ForeColor = System.Drawing.Color.White;
-            this.lblQuantitySalesman.Location = new System.Drawing.Point(23, 46);
+            this.lblQuantitySalesman.Location = new System.Drawing.Point(25, 46);
             this.lblQuantitySalesman.Name = "lblQuantitySalesman";
             this.lblQuantitySalesman.Size = new System.Drawing.Size(191, 57);
             this.lblQuantitySalesman.TabIndex = 0;
@@ -284,9 +294,10 @@ namespace shop_flycam.control
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(18, 126);
+            this.label9.Location = new System.Drawing.Point(20, 126);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(254, 28);
             this.label9.TabIndex = 0;
@@ -295,9 +306,10 @@ namespace shop_flycam.control
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(17, 14);
+            this.label10.Location = new System.Drawing.Point(19, 14);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(131, 32);
             this.label10.TabIndex = 0;
@@ -306,10 +318,7 @@ namespace shop_flycam.control
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(172)))), ((int)(((byte)(83)))));
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.lblQuantityBuyer);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.bunifuGradientPanel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(344, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -320,6 +329,7 @@ namespace shop_flycam.control
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(220, 14);
             this.pictureBox2.Name = "pictureBox2";
@@ -330,6 +340,7 @@ namespace shop_flycam.control
             // 
             // lblQuantityBuyer
             // 
+            this.lblQuantityBuyer.BackColor = System.Drawing.Color.Transparent;
             this.lblQuantityBuyer.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantityBuyer.ForeColor = System.Drawing.Color.White;
             this.lblQuantityBuyer.Location = new System.Drawing.Point(23, 46);
@@ -342,6 +353,7 @@ namespace shop_flycam.control
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(18, 126);
@@ -353,6 +365,7 @@ namespace shop_flycam.control
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(17, 14);
@@ -380,9 +393,9 @@ namespace shop_flycam.control
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 230);
+            this.panel6.Location = new System.Drawing.Point(0, 313);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1373, 627);
+            this.panel6.Size = new System.Drawing.Size(1373, 544);
             this.panel6.TabIndex = 2;
             // 
             // bunifuElipse7
@@ -395,10 +408,86 @@ namespace shop_flycam.control
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.panel7.Location = new System.Drawing.Point(0, 226);
+            this.panel7.Location = new System.Drawing.Point(3, 269);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1370, 44);
             this.panel7.TabIndex = 3;
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.label1);
+            this.bunifuGradientPanel1.Controls.Add(this.label3);
+            this.bunifuGradientPanel1.Controls.Add(this.lblQuantityOrder);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(116)))), ((int)(((byte)(244)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(128)))), ((int)(((byte)(251)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(112)))), ((int)(((byte)(249)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(314, 183);
+            this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.pictureBox2);
+            this.bunifuGradientPanel2.Controls.Add(this.label7);
+            this.bunifuGradientPanel2.Controls.Add(this.label6);
+            this.bunifuGradientPanel2.Controls.Add(this.lblQuantityBuyer);
+            this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(146)))), ((int)(((byte)(219)))));
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(125)))), ((int)(((byte)(222)))));
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(215)))), ((int)(((byte)(226)))));
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(314, 183);
+            this.bunifuGradientPanel2.TabIndex = 0;
+            // 
+            // bunifuGradientPanel3
+            // 
+            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
+            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.Controls.Add(this.pictureBox3);
+            this.bunifuGradientPanel3.Controls.Add(this.label10);
+            this.bunifuGradientPanel3.Controls.Add(this.label9);
+            this.bunifuGradientPanel3.Controls.Add(this.lblQuantitySalesman);
+            this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.Chartreuse;
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.Green;
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
+            this.bunifuGradientPanel3.Quality = 10;
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(314, 183);
+            this.bunifuGradientPanel3.TabIndex = 0;
+            // 
+            // bunifuGradientPanel4
+            // 
+            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
+            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel4.Controls.Add(this.pictureBox4);
+            this.bunifuGradientPanel4.Controls.Add(this.label13);
+            this.bunifuGradientPanel4.Controls.Add(this.label12);
+            this.bunifuGradientPanel4.Controls.Add(this.lblQuantityAccount);
+            this.bunifuGradientPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(158)))), ((int)(((byte)(62)))));
+            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(25)))));
+            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(169)))), ((int)(((byte)(33)))));
+            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(213)))), ((int)(((byte)(1)))));
+            this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
+            this.bunifuGradientPanel4.Quality = 10;
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(316, 183);
+            this.bunifuGradientPanel4.TabIndex = 0;
             // 
             // dashboard
             // 
@@ -406,26 +495,29 @@ namespace shop_flycam.control
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "dashboard";
             this.Size = new System.Drawing.Size(1373, 857);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel2.PerformLayout();
+            this.bunifuGradientPanel3.ResumeLayout(false);
+            this.bunifuGradientPanel3.PerformLayout();
+            this.bunifuGradientPanel4.ResumeLayout(false);
+            this.bunifuGradientPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -464,5 +556,9 @@ namespace shop_flycam.control
         private System.Windows.Forms.Panel panel6;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse7;
         private System.Windows.Forms.Panel panel7;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
     }
 }

@@ -52,12 +52,13 @@ namespace shop_flycam.form
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.order = new shop_flycam.control.order();
             this.user = new shop_flycam.control.user();
             this.salesman = new shop_flycam.control.salesman();
             this.buyer = new shop_flycam.control.buyer();
             this.flycam = new shop_flycam.control.flycam();
             this.dashboard = new shop_flycam.control.dashboard();
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -361,6 +362,7 @@ namespace shop_flycam.form
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.order);
             this.panel1.Controls.Add(this.user);
             this.panel1.Controls.Add(this.salesman);
             this.panel1.Controls.Add(this.buyer);
@@ -371,6 +373,21 @@ namespace shop_flycam.form
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(909, 571);
             this.panel1.TabIndex = 0;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 15;
+            this.bunifuElipse3.TargetControl = this.pnlCenter;
+            // 
+            // order
+            // 
+            this.order.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.order.Location = new System.Drawing.Point(0, 0);
+            this.order.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.order.Name = "order";
+            this.order.Size = new System.Drawing.Size(909, 571);
+            this.order.TabIndex = 5;
+            this.order.Visible = false;
             // 
             // user
             // 
@@ -423,11 +440,6 @@ namespace shop_flycam.form
             this.dashboard.Name = "dashboard";
             this.dashboard.Size = new System.Drawing.Size(909, 571);
             this.dashboard.TabIndex = 0;
-            // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 15;
-            this.bunifuElipse3.TargetControl = this.pnlCenter;
             // 
             // frmMain
             // 
@@ -490,5 +502,6 @@ namespace shop_flycam.form
         private control.buyer buyer;
         private control.salesman salesman;
         private control.user user;
+        private control.order order;
     }
 }

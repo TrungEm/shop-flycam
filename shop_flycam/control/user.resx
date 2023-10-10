@@ -166,17 +166,6 @@
         BlgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAUdJREFUSEvt
-        lDFKA1EQhleUIAQ8Qw7gAbTzAik8gfaChSewFGwESZ/G1kJs0gUrSxvBTkuPIFg8v39mItnNZnfdjSCS
-        D37emzf/zLCw72VrfoWU0i46Q+c/1Gm0aAYF+6gL19GqHswXXpPe0RQ9WpTnBSmnVXygZ98al9GuGoxj
-        96dxxAMPcxxH7sjD9Iq20L1FTv0XYmo1LGINvLUTp3oghibDirxZMbDfRDd26iz/aUh2GiaIN9CDZaJP
-        KUq653vYNjqo0Z4Vz8FZrk8pSrqnwtQA1XubvzyMfR8dorJXYybl+1HSadjEj2qZREm7Yaw76NNO/DXR
-        y1HU7JWRz76OtdWw+V9/YKYCOve0YR7W9TDj/w0buSc9Id2fK4sc7Yv3a5lH9WIUrRchOXTPyhhG60VI
-        9tAJukNld6qpVK8+vWi9ZlVk2RedY8/c24O8LgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAOpJREFUSEvt
@@ -197,6 +186,17 @@
         7WMIZmkZu6ZFu+jMxhDMaBlzqugBFYt20Bcqf/cykSiWXfp1wD2as9gYdpXvPlUWQ08UFAn2rZaVFgm8
         1sqSRQL/72VN0Xl/zX8tO/UZ94hi/8x1pfPixK4OwdzwmdbYtKvjENhGF6j479xE52gPTdm1E9qi0/kG
         EhAGHXaF6XcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAUdJREFUSEvt
+        lDFKA1EQhleUIAQ8Qw7gAbTzAik8gfaChSewFGwESZ/G1kJs0gUrSxvBTkuPIFg8v39mItnNZnfdjSCS
+        D37emzf/zLCw72VrfoWU0i46Q+c/1Gm0aAYF+6gL19GqHswXXpPe0RQ9WpTnBSmnVXygZ98al9GuGoxj
+        96dxxAMPcxxH7sjD9Iq20L1FTv0XYmo1LGINvLUTp3oghibDirxZMbDfRDd26iz/aUh2GiaIN9CDZaJP
+        KUq653vYNjqo0Z4Vz8FZrk8pSrqnwtQA1XubvzyMfR8dorJXYybl+1HSadjEj2qZREm7Yaw76NNO/DXR
+        y1HU7JWRz76OtdWw+V9/YKYCOve0YR7W9TDj/w0buSc9Id2fK4sc7Yv3a5lH9WIUrRchOXTPyhhG60VI
+        9tAJukNld6qpVK8+vWi9ZlVk2RedY8/c24O8LgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
