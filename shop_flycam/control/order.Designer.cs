@@ -279,9 +279,9 @@ namespace shop_flycam.control
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(116)))), ((int)(((byte)(255)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(116)))), ((int)(((byte)(255)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
@@ -883,7 +883,7 @@ namespace shop_flycam.control
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvOrder.EnableHeadersVisualStyles = false;
-            this.dgvOrder.Location = new System.Drawing.Point(9, 8);
+            this.dgvOrder.Location = new System.Drawing.Point(9, 23);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.ReadOnly = true;
             this.dgvOrder.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -893,7 +893,7 @@ namespace shop_flycam.control
             this.dgvOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvOrder.RowHeadersWidth = 62;
             this.dgvOrder.RowTemplate.Height = 28;
-            this.dgvOrder.Size = new System.Drawing.Size(1353, 214);
+            this.dgvOrder.Size = new System.Drawing.Size(1353, 199);
             this.dgvOrder.TabIndex = 8;
             // 
             // Column1

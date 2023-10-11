@@ -179,7 +179,7 @@ namespace shop_flycam.control
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUser.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvUser.EnableHeadersVisualStyles = false;
-            this.dgvUser.Location = new System.Drawing.Point(9, 106);
+            this.dgvUser.Location = new System.Drawing.Point(9, 135);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -188,7 +188,7 @@ namespace shop_flycam.control
             this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvUser.RowHeadersWidth = 62;
             this.dgvUser.RowTemplate.Height = 28;
-            this.dgvUser.Size = new System.Drawing.Size(1353, 484);
+            this.dgvUser.Size = new System.Drawing.Size(1353, 455);
             this.dgvUser.TabIndex = 8;
             // 
             // Column1
