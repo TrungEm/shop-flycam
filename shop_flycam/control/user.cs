@@ -13,10 +13,10 @@ namespace shop_flycam.control
 {
     public partial class user : UserControl
     {
-        /*public void loadBackColor()
+        public void loadBackColor()
         {
             Color color = new Color();
-            color = function.getBackColor();
+            color = function.getBackColor(0);
 
             panel1.BackColor = color;
             panel2.BackColor = color;
@@ -25,7 +25,7 @@ namespace shop_flycam.control
             pnlMain.BackColor = color;
             dgvUser.BackgroundColor = color;
             tableLayoutPanel.BackColor = color;
-        }*/
+        }
 
         public user()
         {
@@ -37,6 +37,11 @@ namespace shop_flycam.control
             }
 
             dgvUser.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+        }
+
+        private void user_Load(object sender, EventArgs e)
+        {
+            loadBackColor();
         }
     }
 }

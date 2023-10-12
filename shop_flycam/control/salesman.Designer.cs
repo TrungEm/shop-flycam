@@ -658,6 +658,7 @@ namespace shop_flycam.control
             this.Controls.Add(this.pnlTop);
             this.Name = "salesman";
             this.Size = new System.Drawing.Size(1373, 857);
+            this.Load += new System.EventHandler(this.salesman_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);

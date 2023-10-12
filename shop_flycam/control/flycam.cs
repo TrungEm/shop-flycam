@@ -17,10 +17,10 @@ namespace shop_flycam.control
         DataTable table = new DataTable();
         
 
-        /*public void loadBackColor()
+        public void loadBackColor()
         {
             Color color = new Color();
-            color = function.getBackColor();
+            color = function.getBackColor(0);
 
             panel1.BackColor = color;
             panel2.BackColor = color;
@@ -31,7 +31,7 @@ namespace shop_flycam.control
             pnlMain.BackColor = color;
             dgvProduct.BackgroundColor = color;
             tableLayoutPanel.BackColor = color;
-        }*/
+        }
         
         public flycam()
         {
@@ -41,7 +41,7 @@ namespace shop_flycam.control
 
         private void flycam_Load(object sender, EventArgs e)
         {
-            //loadBackColor();
+            loadBackColor();
         }
 
         

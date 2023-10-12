@@ -75,8 +75,12 @@ namespace shop_flycam.form
                     table = function.getData("SELECT fullname FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "'");
                     
                     frmMain formMain = new frmMain();
+                    Color color = new Color();
+                    color = function.getBackColor(1);
                     formMain.name = table.Rows[0][0].ToString();
+                    formMain.BackColor = color;
                     formMain.ShowDialog();
+
 
                     emptyBox();
 

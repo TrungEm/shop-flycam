@@ -31,9 +31,9 @@ namespace shop_flycam.control
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -73,7 +73,7 @@ namespace shop_flycam.control
             this.pnlChangeBG = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.pnlCanlendar = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnChangeBackColorDown = new System.Windows.Forms.Button();
             this.btnBackColor = new System.Windows.Forms.Button();
             this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -510,18 +510,18 @@ namespace shop_flycam.control
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea2.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend2);
-            this.chartRevenue.Location = new System.Drawing.Point(3, -3);
+            chartArea1.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend1);
+            this.chartRevenue.Location = new System.Drawing.Point(0, -3);
             this.chartRevenue.Name = "chartRevenue";
             this.chartRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Doanh thu";
-            this.chartRevenue.Series.Add(series2);
-            this.chartRevenue.Size = new System.Drawing.Size(965, 554);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Doanh thu";
+            this.chartRevenue.Series.Add(series1);
+            this.chartRevenue.Size = new System.Drawing.Size(968, 557);
             this.chartRevenue.TabIndex = 1;
             this.chartRevenue.Text = "chart1";
             // 
@@ -552,27 +552,28 @@ namespace shop_flycam.control
             this.pnlCanlendar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCanlendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.pnlCanlendar.Controls.Add(this.button1);
+            this.pnlCanlendar.Controls.Add(this.btnChangeBackColorDown);
             this.pnlCanlendar.Controls.Add(this.btnBackColor);
             this.pnlCanlendar.Location = new System.Drawing.Point(1008, 268);
             this.pnlCanlendar.Name = "pnlCanlendar";
             this.pnlCanlendar.Size = new System.Drawing.Size(365, 316);
             this.pnlCanlendar.TabIndex = 3;
             // 
-            // button1
+            // btnChangeBackColorDown
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(54, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 84);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Thay đổi nền dưới";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnChangeBackColorDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangeBackColorDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
+            this.btnChangeBackColorDown.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeBackColorDown.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
+            this.btnChangeBackColorDown.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangeBackColorDown.ForeColor = System.Drawing.Color.White;
+            this.btnChangeBackColorDown.Location = new System.Drawing.Point(54, 182);
+            this.btnChangeBackColorDown.Name = "btnChangeBackColorDown";
+            this.btnChangeBackColorDown.Size = new System.Drawing.Size(245, 84);
+            this.btnChangeBackColorDown.TabIndex = 1;
+            this.btnChangeBackColorDown.Text = "Thay đổi nền dưới";
+            this.btnChangeBackColorDown.UseVisualStyleBackColor = false;
+            this.btnChangeBackColorDown.Click += new System.EventHandler(this.btnChangeBackColorDown_Click);
             // 
             // btnBackColor
             // 
@@ -696,6 +697,6 @@ namespace shop_flycam.control
         private System.Windows.Forms.Button btnBackColor;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
         private System.Windows.Forms.ColorDialog colorDialog;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChangeBackColorDown;
     }
 }

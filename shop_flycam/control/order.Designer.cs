@@ -1029,6 +1029,7 @@ namespace shop_flycam.control
             this.Controls.Add(this.pnlTop);
             this.Name = "order";
             this.Size = new System.Drawing.Size(1373, 857);
+            this.Load += new System.EventHandler(this.order_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

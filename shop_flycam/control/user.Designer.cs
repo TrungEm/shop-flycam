@@ -540,6 +540,7 @@ namespace shop_flycam.control
             this.Controls.Add(this.pnlTop);
             this.Name = "user";
             this.Size = new System.Drawing.Size(1373, 857);
+            this.Load += new System.EventHandler(this.user_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

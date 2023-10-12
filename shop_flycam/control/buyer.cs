@@ -13,10 +13,10 @@ namespace shop_flycam.control
 {
     public partial class buyer : UserControl
     {
-        /*public void loadBackColor()
+        public void loadBackColor()
         {
             Color color = new Color();
-            color = function.getBackColor();
+            color = function.getBackColor(0);
 
             panel1.BackColor = color;
             panel2.BackColor = color;
@@ -25,7 +25,7 @@ namespace shop_flycam.control
             dgvBuyer.BackgroundColor = color;
             pnlMain.BackColor = color;
             tableLayoutPanel.BackColor = color;
-        }*/
+        }
 
         public buyer()
         {
@@ -39,6 +39,9 @@ namespace shop_flycam.control
             dgvBuyer.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
         }
 
-        
+        private void buyer_Load(object sender, EventArgs e)
+        {
+            loadBackColor();
+        }
     }
 }

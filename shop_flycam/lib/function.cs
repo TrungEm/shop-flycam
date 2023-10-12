@@ -40,11 +40,11 @@ namespace shop_flycam.lib
             return table;
         }
 
-        // Lấy số liệu BackColor
-        public static Color getBackColor()
+        // Lấy mã màu BackColor
+        public static Color getBackColor(int id)
         {
             DataTable table = new DataTable();
-            table = getData("SELECT red, green, blue FROM tblBackColor WHERE id = " + 0);
+            table = getData("SELECT red, green, blue FROM tblBackColor WHERE id = " + id);
             int red = Convert.ToInt32(table.Rows[0][0]);
             int green = Convert.ToInt32(table.Rows[0][1]);
             int blue = Convert.ToInt32(table.Rows[0][2]);

@@ -32,6 +32,21 @@ namespace shop_flycam.control
             
         }
 
+        public void loadBackColor()
+        {
+            Color color = new Color();
+            color = function.getBackColor(0);
+
+            chartRevenue.BackColor = color;
+            pnlTopDashboard.BackColor = color;
+            pnlCanlendar.BackColor = color;
+            pnlChangeBG.BackColor = color;
+            tableLayoutPanel.BackColor = color;
+
+            color = function.getBackColor(1);
+            pnlContentDashboard.BackColor = color;
+        }
+
         public dashboard()
         {
             InitializeComponent();
@@ -51,41 +66,38 @@ namespace shop_flycam.control
             loadData();
 
             // Thay đổi backgr
-            //Color color = new Color();
-            //color = function.getBackColor();
-
-            //chartRevenue.BackColor = color;
-            //pnlTopDashboard.BackColor = color;
-            //pnlCanlendar.BackColor = color;
-            //pnlChangeBG.BackColor = color;
-            //tableLayoutPanel.BackColor = color;
+            loadBackColor();
         }
 
         private void btnBackColor_Click(object sender, EventArgs e)
         {
 
-            /*if (colorDialog.ShowDialog() == DialogResult.OK)
+            if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 Color color = colorDialog.Color;
-
-                // Dashboard
-                chartRevenue.BackColor = color;
-                pnlTopDashboard.BackColor = color;
-                pnlCanlendar.BackColor = color;
-                pnlChangeBG.BackColor = color;
-                tableLayoutPanel.BackColor = color;
 
                 int red = Convert.ToInt32(color.R);
                 int green = Convert.ToInt32(color.G);
                 int blue = Convert.ToInt32(color.B);
 
                 function.getData("UPDATE tblBackColor SET red = " + red + ", green = " + green + ", blue = " + blue + " WHERE id = 0");
-            }*/
-
-            MessageBox.Show("Chức năng chưa hoàn thiện!!.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("Thay Background thành công, bạn hãy thoát và đăng nhập lại!!.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        
+        private void btnChangeBackColorDown_Click(object sender, EventArgs e)
+        {
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                Color color = colorDialog.Color;
+
+                int red = Convert.ToInt32(color.R);
+                int green = Convert.ToInt32(color.G);
+                int blue = Convert.ToInt32(color.B);
+
+                function.getData("UPDATE tblBackColor SET red = " + red + ", green = " + green + ", blue = " + blue + " WHERE id = 1");
+                MessageBox.Show("Thay Background thành công, bạn hãy thoát và đăng nhập lại!!.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
