@@ -31,9 +31,9 @@ namespace shop_flycam.control
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -44,8 +44,8 @@ namespace shop_flycam.control
             this.lblQuantityOrder = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlTopDashboard = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -67,22 +67,24 @@ namespace shop_flycam.control
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlContentDashboard = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnlChangeBG = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.pnlCanlendar = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnBackColor = new System.Windows.Forms.Button();
             this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.pnlTopDashboard.SuspendLayout();
+            this.tableLayoutPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.bunifuGradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -92,11 +94,11 @@ namespace shop_flycam.control
             this.panel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.pnlContentDashboard.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnlChangeBG.SuspendLayout();
+            this.pnlCanlendar.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -197,39 +199,39 @@ namespace shop_flycam.control
             // bunifuElipse3
             // 
             this.bunifuElipse3.ElipseRadius = 15;
-            this.bunifuElipse3.TargetControl = this.panel1;
+            this.bunifuElipse3.TargetControl = this.pnlTopDashboard;
             // 
-            // panel1
+            // pnlTopDashboard
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 400);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1373, 272);
-            this.panel1.TabIndex = 1;
+            this.pnlTopDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlTopDashboard.Controls.Add(this.tableLayoutPanel);
+            this.pnlTopDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopDashboard.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopDashboard.Margin = new System.Windows.Forms.Padding(0, 0, 0, 400);
+            this.pnlTopDashboard.Name = "pnlTopDashboard";
+            this.pnlTopDashboard.Size = new System.Drawing.Size(1373, 273);
+            this.pnlTopDashboard.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanel
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 45);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1338, 183);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.tableLayoutPanel.ColumnCount = 4;
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel.Controls.Add(this.panel5, 3, 0);
+            this.tableLayoutPanel.Controls.Add(this.panel4, 2, 0);
+            this.tableLayoutPanel.Controls.Add(this.panel3, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel.Location = new System.Drawing.Point(16, 45);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            this.tableLayoutPanel.RowCount = 1;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(1338, 183);
+            this.tableLayoutPanel.TabIndex = 0;
             // 
             // panel5
             // 
@@ -480,17 +482,17 @@ namespace shop_flycam.control
             this.bunifuElipse6.ElipseRadius = 30;
             this.bunifuElipse6.TargetControl = this.panel5;
             // 
-            // panel6
+            // pnlContentDashboard
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.panel6.Controls.Add(this.panel9);
-            this.panel6.Controls.Add(this.panel8);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 272);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1373, 585);
-            this.panel6.TabIndex = 2;
+            this.pnlContentDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
+            this.pnlContentDashboard.Controls.Add(this.panel9);
+            this.pnlContentDashboard.Controls.Add(this.pnlChangeBG);
+            this.pnlContentDashboard.Controls.Add(this.pnlCanlendar);
+            this.pnlContentDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContentDashboard.Location = new System.Drawing.Point(0, 273);
+            this.pnlContentDashboard.Name = "pnlContentDashboard";
+            this.pnlContentDashboard.Size = new System.Drawing.Size(1373, 584);
+            this.pnlContentDashboard.TabIndex = 2;
             // 
             // panel9
             // 
@@ -499,7 +501,7 @@ namespace shop_flycam.control
             this.panel9.Controls.Add(this.chartRevenue);
             this.panel9.Location = new System.Drawing.Point(0, 30);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(968, 552);
+            this.panel9.Size = new System.Drawing.Size(968, 551);
             this.panel9.TabIndex = 5;
             // 
             // chartRevenue
@@ -508,58 +510,32 @@ namespace shop_flycam.control
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea1.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend1);
-            this.chartRevenue.Location = new System.Drawing.Point(3, 0);
+            chartArea2.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend2);
+            this.chartRevenue.Location = new System.Drawing.Point(3, -3);
             this.chartRevenue.Name = "chartRevenue";
             this.chartRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh thu";
-            this.chartRevenue.Series.Add(series1);
-            this.chartRevenue.Size = new System.Drawing.Size(965, 555);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Doanh thu";
+            this.chartRevenue.Series.Add(series2);
+            this.chartRevenue.Size = new System.Drawing.Size(965, 554);
             this.chartRevenue.TabIndex = 1;
             this.chartRevenue.Text = "chart1";
             // 
-            // panel8
+            // pnlChangeBG
             // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.panel8.Controls.Add(this.button1);
-            this.panel8.Location = new System.Drawing.Point(1008, 30);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(365, 183);
-            this.panel8.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(25)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(25)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(60, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 84);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thay đổi nền";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlChangeBG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.panel7.Controls.Add(this.monthCalendar1);
-            this.panel7.Location = new System.Drawing.Point(1008, 268);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(365, 317);
-            this.panel7.TabIndex = 3;
+            this.pnlChangeBG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlChangeBG.Controls.Add(this.monthCalendar1);
+            this.pnlChangeBG.Location = new System.Drawing.Point(1008, 30);
+            this.pnlChangeBG.Name = "pnlChangeBG";
+            this.pnlChangeBG.Size = new System.Drawing.Size(365, 199);
+            this.pnlChangeBG.TabIndex = 4;
             // 
             // monthCalendar1
             // 
@@ -567,14 +543,57 @@ namespace shop_flycam.control
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.monthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.monthCalendar1.Location = new System.Drawing.Point(70, 125);
+            this.monthCalendar1.Location = new System.Drawing.Point(65, 70);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 2;
+            // 
+            // pnlCanlendar
+            // 
+            this.pnlCanlendar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCanlendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlCanlendar.Controls.Add(this.button1);
+            this.pnlCanlendar.Controls.Add(this.btnBackColor);
+            this.pnlCanlendar.Location = new System.Drawing.Point(1008, 268);
+            this.pnlCanlendar.Name = "pnlCanlendar";
+            this.pnlCanlendar.Size = new System.Drawing.Size(365, 316);
+            this.pnlCanlendar.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(54, 182);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(245, 84);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Thay đổi nền dưới";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnBackColor
+            // 
+            this.btnBackColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBackColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(233)))));
+            this.btnBackColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackColor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(233)))));
+            this.btnBackColor.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackColor.ForeColor = System.Drawing.Color.White;
+            this.btnBackColor.Location = new System.Drawing.Point(54, 65);
+            this.btnBackColor.Name = "btnBackColor";
+            this.btnBackColor.Size = new System.Drawing.Size(245, 84);
+            this.btnBackColor.TabIndex = 0;
+            this.btnBackColor.Text = "Thay đổi nền trên";
+            this.btnBackColor.UseVisualStyleBackColor = false;
+            this.btnBackColor.Click += new System.EventHandler(this.btnBackColor_Click);
             // 
             // bunifuElipse7
             // 
             this.bunifuElipse7.ElipseRadius = 15;
-            this.bunifuElipse7.TargetControl = this.panel6;
+            this.bunifuElipse7.TargetControl = this.pnlContentDashboard;
             // 
             // bunifuElipse8
             // 
@@ -584,12 +603,12 @@ namespace shop_flycam.control
             // bunifuElipse9
             // 
             this.bunifuElipse9.ElipseRadius = 15;
-            this.bunifuElipse9.TargetControl = this.panel7;
+            this.bunifuElipse9.TargetControl = this.pnlCanlendar;
             // 
             // bunifuElipse10
             // 
             this.bunifuElipse10.ElipseRadius = 15;
-            this.bunifuElipse10.TargetControl = this.panel8;
+            this.bunifuElipse10.TargetControl = this.pnlChangeBG;
             // 
             // dashboard
             // 
@@ -597,8 +616,8 @@ namespace shop_flycam.control
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlContentDashboard);
+            this.Controls.Add(this.pnlTopDashboard);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "dashboard";
             this.Size = new System.Drawing.Size(1373, 857);
@@ -607,8 +626,8 @@ namespace shop_flycam.control
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.pnlTopDashboard.ResumeLayout(false);
+            this.tableLayoutPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.bunifuGradientPanel4.ResumeLayout(false);
             this.bunifuGradientPanel4.PerformLayout();
@@ -621,11 +640,11 @@ namespace shop_flycam.control
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel6.ResumeLayout(false);
+            this.pnlContentDashboard.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.pnlChangeBG.ResumeLayout(false);
+            this.pnlCanlendar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -639,8 +658,8 @@ namespace shop_flycam.control
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel pnlTopDashboard;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblQuantityOrder;
@@ -661,7 +680,7 @@ namespace shop_flycam.control
         private System.Windows.Forms.Label lblQuantityBuyer;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlContentDashboard;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse7;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
@@ -670,11 +689,13 @@ namespace shop_flycam.control
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRevenue;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnlCanlendar;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel pnlChangeBG;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBackColor;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
+        private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.Button button1;
     }
 }

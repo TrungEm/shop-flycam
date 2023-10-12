@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shop_flycam.lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,22 +40,14 @@ namespace shop_flycam.form
             }
             else
             {
-                // Khai báo connect CSDL
-                SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Workspace\\university\\2023\\LT-WINDOW\\shop_flycam\\shop_flycam\\QLShopFlycam.mdf;Integrated Security=True");
-                DataTable data = new DataTable();
-                SqlDataAdapter addData = new SqlDataAdapter();
+                DataTable table = new DataTable();
+                table = function.getData("SELECT COUNT(*) FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "' AND email = '" + txtEmail.Text.Trim() + "'");
 
-                SqlCommand cm = new SqlCommand("SELECT COUNT(*) FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "' AND email = '" + txtEmail.Text.Trim() + "'", conn);
-                addData.SelectCommand = cm;
-                addData.Fill(data);
-
-                if (data.Rows[0][0].ToString() == "1")
+                if (table.Rows[0][0].ToString() == "1")
                 {
-                    SqlCommand cmPass = new SqlCommand("SELECT password FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "' AND email = '" + txtEmail.Text.Trim() + "'", conn);
-                    addData.SelectCommand = cmPass;
-                    addData.Fill(data);
+                    table = function.getData("SELECT password FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "' AND email = '" + txtEmail.Text.Trim() + "'");
                     
-                    MessageBox.Show($"Mật khẩu của bạn là: {data.Rows[1][1]}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Mật khẩu của bạn là: {table.Rows[0][0]}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 else

@@ -306,6 +306,7 @@ namespace shop_flycam.form
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ Thống Quản Lý Cửa Hàng Bán Flycam | Đăng Nhập";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();

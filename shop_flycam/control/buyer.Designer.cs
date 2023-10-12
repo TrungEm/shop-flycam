@@ -31,14 +31,14 @@ namespace shop_flycam.control
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buyer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button6 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -58,7 +58,7 @@ namespace shop_flycam.control
             this.button1 = new System.Windows.Forms.Button();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -79,7 +79,7 @@ namespace shop_flycam.control
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.pnlTop.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel.SuspendLayout();
             this.panel10.SuspendLayout();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,14 +106,14 @@ namespace shop_flycam.control
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel5.Controls.Add(this.textBox5);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(421, 134);
-            this.panel5.Margin = new System.Windows.Forms.Padding(10, 2, 10, 6);
+            this.panel5.Location = new System.Drawing.Point(411, 132);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(460, 124);
+            this.panel5.Size = new System.Drawing.Size(480, 132);
             this.panel5.TabIndex = 9;
             // 
             // textBox5
@@ -123,10 +123,10 @@ namespace shop_flycam.control
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox5.Location = new System.Drawing.Point(8, 42);
+            this.textBox5.Location = new System.Drawing.Point(8, 34);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(310, 47);
+            this.textBox5.Size = new System.Drawing.Size(451, 77);
             this.textBox5.TabIndex = 8;
             // 
             // label6
@@ -136,20 +136,20 @@ namespace shop_flycam.control
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
             this.label6.Location = new System.Drawing.Point(3, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 28);
+            this.label6.Size = new System.Drawing.Size(78, 28);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Điện thoại";
+            this.label6.Text = "Địa chỉ";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel4.Controls.Add(this.textBox4);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(10, 134);
-            this.panel4.Margin = new System.Windows.Forms.Padding(10, 2, 10, 6);
+            this.panel4.Location = new System.Drawing.Point(0, 132);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(391, 124);
+            this.panel4.Size = new System.Drawing.Size(411, 132);
             this.panel4.TabIndex = 10;
             // 
             // textBox4
@@ -159,10 +159,10 @@ namespace shop_flycam.control
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox4.Location = new System.Drawing.Point(8, 34);
+            this.textBox4.Location = new System.Drawing.Point(8, 48);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(361, 86);
+            this.textBox4.Size = new System.Drawing.Size(269, 47);
             this.textBox4.TabIndex = 8;
             // 
             // label5
@@ -172,20 +172,20 @@ namespace shop_flycam.control
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
             this.label5.Location = new System.Drawing.Point(3, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 28);
+            this.label5.Size = new System.Drawing.Size(111, 28);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Địa chỉ";
+            this.label5.Text = "Điện thoại";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(10, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(10, 2, 10, 6);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(391, 124);
+            this.panel1.Size = new System.Drawing.Size(411, 132);
             this.panel1.TabIndex = 0;
             // 
             // textBox1
@@ -193,12 +193,12 @@ namespace shop_flycam.control
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox1.Location = new System.Drawing.Point(8, 49);
+            this.textBox1.Location = new System.Drawing.Point(8, 53);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 47);
+            this.textBox1.Size = new System.Drawing.Size(269, 46);
             this.textBox1.TabIndex = 8;
             // 
             // label1
@@ -214,14 +214,14 @@ namespace shop_flycam.control
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(421, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10, 2, 10, 6);
+            this.panel2.Location = new System.Drawing.Point(411, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(460, 124);
+            this.panel2.Size = new System.Drawing.Size(480, 132);
             this.panel2.TabIndex = 9;
             // 
             // textBox2
@@ -229,12 +229,12 @@ namespace shop_flycam.control
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox2.Location = new System.Drawing.Point(8, 49);
+            this.textBox2.Location = new System.Drawing.Point(8, 53);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(426, 47);
+            this.textBox2.Size = new System.Drawing.Size(373, 46);
             this.textBox2.TabIndex = 8;
             // 
             // label2
@@ -319,7 +319,7 @@ namespace shop_flycam.control
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.pnlTop.Controls.Add(this.tableLayoutPanel1);
+            this.pnlTop.Controls.Add(this.tableLayoutPanel);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Margin = new System.Windows.Forms.Padding(0, 0, 0, 400);
@@ -327,28 +327,28 @@ namespace shop_flycam.control
             this.pnlTop.Size = new System.Drawing.Size(1373, 264);
             this.pnlTop.TabIndex = 8;
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanel
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.Controls.Add(this.panel10, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel9, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1373, 264);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel.ColumnCount = 3;
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel.Controls.Add(this.panel10, 2, 1);
+            this.tableLayoutPanel.Controls.Add(this.panel5, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.panel4, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.panel9, 2, 0);
+            this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            this.tableLayoutPanel.RowCount = 2;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(1373, 264);
+            this.tableLayoutPanel.TabIndex = 0;
             // 
             // panel10
             // 
@@ -424,9 +424,9 @@ namespace shop_flycam.control
             // dgvBuyer
             // 
             this.dgvBuyer.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvBuyer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvBuyer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvBuyer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -435,45 +435,45 @@ namespace shop_flycam.control
             this.dgvBuyer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBuyer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvBuyer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBuyer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBuyer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvBuyer.ColumnHeadersHeight = 30;
             this.dgvBuyer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBuyer.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBuyer.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgvBuyer.EnableHeadersVisualStyles = false;
-            this.dgvBuyer.Location = new System.Drawing.Point(9, 141);
+            this.dgvBuyer.Location = new System.Drawing.Point(0, 141);
             this.dgvBuyer.Name = "dgvBuyer";
             this.dgvBuyer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBuyer.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBuyer.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvBuyer.RowHeadersWidth = 62;
             this.dgvBuyer.RowTemplate.Height = 28;
-            this.dgvBuyer.Size = new System.Drawing.Size(1353, 449);
+            this.dgvBuyer.Size = new System.Drawing.Size(1374, 452);
             this.dgvBuyer.TabIndex = 8;
             // 
             // Column1
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle19;
             this.Column1.FillWeight = 60F;
             this.Column1.HeaderText = "Mã khách";
             this.Column1.MinimumWidth = 8;
@@ -481,17 +481,17 @@ namespace shop_flycam.control
             // 
             // Column2
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle20;
             this.Column2.HeaderText = "Tên khách";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle21;
             this.Column3.FillWeight = 60F;
             this.Column3.HeaderText = "Điện thoại";
             this.Column3.MinimumWidth = 8;
@@ -499,9 +499,9 @@ namespace shop_flycam.control
             // 
             // Column4
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle22;
             this.Column4.HeaderText = "Địa chỉ";
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
@@ -522,9 +522,9 @@ namespace shop_flycam.control
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.panel7.Location = new System.Drawing.Point(0, 3);
+            this.panel7.Location = new System.Drawing.Point(0, -3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1374, 36);
+            this.panel7.Size = new System.Drawing.Size(1374, 42);
             this.panel7.TabIndex = 7;
             // 
             // bunifuElipse1
@@ -550,7 +550,7 @@ namespace shop_flycam.control
             this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
@@ -580,7 +580,7 @@ namespace shop_flycam.control
         private System.Windows.Forms.Button button2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;

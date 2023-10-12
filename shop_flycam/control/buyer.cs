@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shop_flycam.lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,20 @@ namespace shop_flycam.control
 {
     public partial class buyer : UserControl
     {
+        /*public void loadBackColor()
+        {
+            Color color = new Color();
+            color = function.getBackColor();
+
+            panel1.BackColor = color;
+            panel2.BackColor = color;
+            panel4.BackColor = color;
+            panel5.BackColor = color;
+            dgvBuyer.BackgroundColor = color;
+            pnlMain.BackColor = color;
+            tableLayoutPanel.BackColor = color;
+        }*/
+
         public buyer()
         {
             InitializeComponent();
@@ -24,5 +39,6 @@ namespace shop_flycam.control
             dgvBuyer.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
         }
 
+        
     }
 }

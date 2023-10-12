@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shop_flycam.lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,20 @@ namespace shop_flycam.control
 {
     public partial class user : UserControl
     {
+        /*public void loadBackColor()
+        {
+            Color color = new Color();
+            color = function.getBackColor();
+
+            panel1.BackColor = color;
+            panel2.BackColor = color;
+            panel4.BackColor = color;
+            panel5.BackColor = color;
+            pnlMain.BackColor = color;
+            dgvUser.BackgroundColor = color;
+            tableLayoutPanel.BackColor = color;
+        }*/
+
         public user()
         {
             InitializeComponent();

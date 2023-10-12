@@ -52,13 +52,14 @@ namespace shop_flycam.form
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.order = new shop_flycam.control.order();
             this.user = new shop_flycam.control.user();
             this.salesman = new shop_flycam.control.salesman();
             this.buyer = new shop_flycam.control.buyer();
             this.flycam = new shop_flycam.control.flycam();
             this.dashboard = new shop_flycam.control.dashboard();
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -374,11 +375,6 @@ namespace shop_flycam.form
             this.panel1.Size = new System.Drawing.Size(909, 571);
             this.panel1.TabIndex = 0;
             // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 15;
-            this.bunifuElipse3.TargetControl = this.pnlCenter;
-            // 
             // order
             // 
             this.order.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -440,6 +436,11 @@ namespace shop_flycam.form
             this.dashboard.Name = "dashboard";
             this.dashboard.Size = new System.Drawing.Size(909, 571);
             this.dashboard.TabIndex = 0;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 15;
+            this.bunifuElipse3.TargetControl = this.pnlCenter;
             // 
             // frmMain
             // 
@@ -503,5 +504,6 @@ namespace shop_flycam.form
         private control.salesman salesman;
         private control.user user;
         private control.order order;
+        private System.Windows.Forms.ColorDialog colorDialog;
     }
 }

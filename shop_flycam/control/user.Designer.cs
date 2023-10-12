@@ -55,7 +55,7 @@ namespace shop_flycam.control
             this.button1 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace shop_flycam.control
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.panel10.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -179,7 +179,7 @@ namespace shop_flycam.control
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUser.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvUser.EnableHeadersVisualStyles = false;
-            this.dgvUser.Location = new System.Drawing.Point(9, 135);
+            this.dgvUser.Location = new System.Drawing.Point(0, 135);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -188,7 +188,7 @@ namespace shop_flycam.control
             this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvUser.RowHeadersWidth = 62;
             this.dgvUser.RowTemplate.Height = 28;
-            this.dgvUser.Size = new System.Drawing.Size(1353, 455);
+            this.dgvUser.Size = new System.Drawing.Size(1374, 458);
             this.dgvUser.TabIndex = 8;
             // 
             // Column1
@@ -232,9 +232,9 @@ namespace shop_flycam.control
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.panel7.Location = new System.Drawing.Point(0, 3);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1374, 36);
+            this.panel7.Size = new System.Drawing.Size(1374, 39);
             this.panel7.TabIndex = 7;
             // 
             // bunifuElipse3
@@ -305,39 +305,39 @@ namespace shop_flycam.control
             this.button6.Text = "      Bỏ qua";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanel
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.Controls.Add(this.panel10, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel9, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1373, 264);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel.ColumnCount = 3;
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel.Controls.Add(this.panel10, 2, 1);
+            this.tableLayoutPanel.Controls.Add(this.panel5, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.panel4, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.panel9, 2, 0);
+            this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            this.tableLayoutPanel.RowCount = 2;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(1373, 264);
+            this.tableLayoutPanel.TabIndex = 0;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel5.Controls.Add(this.textBox5);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(421, 134);
-            this.panel5.Margin = new System.Windows.Forms.Padding(10, 2, 10, 6);
+            this.panel5.Location = new System.Drawing.Point(411, 132);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(460, 124);
+            this.panel5.Size = new System.Drawing.Size(480, 132);
             this.panel5.TabIndex = 9;
             // 
             // textBox5
@@ -345,12 +345,12 @@ namespace shop_flycam.control
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.BackColor = System.Drawing.Color.White;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox5.Location = new System.Drawing.Point(8, 49);
+            this.textBox5.Location = new System.Drawing.Point(8, 53);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(352, 47);
+            this.textBox5.Size = new System.Drawing.Size(372, 47);
             this.textBox5.TabIndex = 8;
             // 
             // label6
@@ -366,14 +366,14 @@ namespace shop_flycam.control
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel4.Controls.Add(this.textBox4);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(10, 134);
-            this.panel4.Margin = new System.Windows.Forms.Padding(10, 2, 10, 6);
+            this.panel4.Location = new System.Drawing.Point(0, 132);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(391, 124);
+            this.panel4.Size = new System.Drawing.Size(411, 132);
             this.panel4.TabIndex = 10;
             // 
             // textBox4
@@ -381,12 +381,12 @@ namespace shop_flycam.control
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.BackColor = System.Drawing.Color.White;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox4.Location = new System.Drawing.Point(8, 49);
+            this.textBox4.Location = new System.Drawing.Point(8, 53);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(361, 47);
+            this.textBox4.Size = new System.Drawing.Size(296, 47);
             this.textBox4.TabIndex = 8;
             // 
             // label5
@@ -402,14 +402,14 @@ namespace shop_flycam.control
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(10, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(10, 2, 10, 6);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(391, 124);
+            this.panel1.Size = new System.Drawing.Size(411, 132);
             this.panel1.TabIndex = 0;
             // 
             // textBox1
@@ -417,12 +417,12 @@ namespace shop_flycam.control
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox1.Location = new System.Drawing.Point(8, 49);
+            this.textBox1.Location = new System.Drawing.Point(8, 53);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 47);
+            this.textBox1.Size = new System.Drawing.Size(296, 47);
             this.textBox1.TabIndex = 8;
             // 
             // label1
@@ -438,14 +438,14 @@ namespace shop_flycam.control
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(421, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10, 2, 10, 6);
+            this.panel2.Location = new System.Drawing.Point(411, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(460, 124);
+            this.panel2.Size = new System.Drawing.Size(480, 132);
             this.panel2.TabIndex = 9;
             // 
             // textBox2
@@ -453,12 +453,12 @@ namespace shop_flycam.control
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
-            this.textBox2.Location = new System.Drawing.Point(8, 49);
+            this.textBox2.Location = new System.Drawing.Point(8, 53);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(426, 47);
+            this.textBox2.Size = new System.Drawing.Size(372, 47);
             this.textBox2.TabIndex = 8;
             // 
             // label2
@@ -519,7 +519,7 @@ namespace shop_flycam.control
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.pnlTop.Controls.Add(this.tableLayoutPanel1);
+            this.pnlTop.Controls.Add(this.tableLayoutPanel);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Margin = new System.Windows.Forms.Padding(0, 0, 0, 400);
@@ -545,7 +545,7 @@ namespace shop_flycam.control
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.panel10.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -569,7 +569,7 @@ namespace shop_flycam.control
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;

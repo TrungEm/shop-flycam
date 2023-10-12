@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shop_flycam.lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,7 @@ namespace shop_flycam.form
         // Đóng chương trình
         private void picClose_Click(object sender, EventArgs e)
         {
+            function.disConnect();
             Close();
         }
 
@@ -65,23 +67,15 @@ namespace shop_flycam.form
                 return;
             } else
             {
-                // Khai báo connect CSDL
-                SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Workspace\\university\\2023\\LT-WINDOW\\shop_flycam\\shop_flycam\\QLShopFlycam.mdf;Integrated Security=True");
-                DataTable data = new DataTable();
-                SqlDataAdapter addData = new SqlDataAdapter();
-
-                SqlCommand cm = new SqlCommand("SELECT COUNT(*) FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "' AND password = '" + txtPassword.Text.Trim() + "'", conn);
-                addData.SelectCommand = cm;
-                addData.Fill(data);
-
-                if (data.Rows[0][0].ToString() == "1")
+                DataTable table = new DataTable();
+                table = function.getData("SELECT COUNT(*) FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "' AND password = '" + txtPassword.Text.Trim() + "'");
+                
+                if (table.Rows[0][0].ToString() == "1")
                 {
-                    SqlCommand cmGetName = new SqlCommand("SELECT fullname FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "'", conn);
-                    addData.SelectCommand = cmGetName;
-                    addData.Fill(data);
-
+                    table = function.getData("SELECT fullname FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "'");
+                    
                     frmMain formMain = new frmMain();
-                    formMain.name = data.Rows[1][1].ToString();
+                    formMain.name = table.Rows[0][0].ToString();
                     formMain.ShowDialog();
 
                     emptyBox();
@@ -100,6 +94,11 @@ namespace shop_flycam.form
             emptyBox();
             frmForgotPassword frmForPass = new frmForgotPassword();
             frmForPass.ShowDialog();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            function.connect();
         }
     }
 }
