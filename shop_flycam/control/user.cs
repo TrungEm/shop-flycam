@@ -14,6 +14,8 @@ namespace shop_flycam.control
 {
     public partial class user : UserControl
     {
+        DataTable table = new DataTable();
+
         // Load background
         public void loadBackColor()
         {
@@ -32,7 +34,8 @@ namespace shop_flycam.control
         // Load data ra dgv
         public void loadDataGridView()
         {
-            DataTable table = new DataTable();
+            dgvUser.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            
             table = function.getData("SELECT * FROM tblUser");
             dgvUser.DataSource = table;
             dgvUser.Columns[0].HeaderText = "Tên đăng nhập";
@@ -43,17 +46,15 @@ namespace shop_flycam.control
 
         public void empty()
         {
-            txtUsername.Text = "";
-            txtPassword.Text = "";
-            txtFullname.Text = "";
-            txtEmail.Text = "";
+            txtUsername.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtFullname.Text = string.Empty;
+            txtEmail.Text = string.Empty;
         }
 
         public user()
         {
             InitializeComponent();
-
-            dgvUser.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
         }
 
         // Sự kiện load control user
@@ -63,39 +64,24 @@ namespace shop_flycam.control
             loadDataGridView();
         }
 
+        //Vô hiệu hoá btn
+        public void enabledBtn(bool btnAdd, bool btnDelete, bool btnUpdate, bool btnSv, bool Cancel)
+        {
+            btnAddUser.Enabled = btnAdd;
+            btnDeleteUser.Enabled = btnDelete;
+            btnUpdateUser.Enabled = btnUpdate;
+            btnSave.Enabled = btnSv;
+            btnCancel.Enabled = Cancel;
+        }
+
         // Thêm tài khoản
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string fullname = txtFullname.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string password = txtPassword.Text.Trim();
-
-            if (username == string.Empty)
-            {
-                MessageBox.Show("Vui lòng nhập Tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            } else if (fullname == string.Empty)
-            {
-                MessageBox.Show("Vui lòng nhập Họ tên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            } else if (email == string.Empty)
-            {
-                MessageBox.Show("Vui lòng nhập Email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            } else if (password == string.Empty)
-            {
-                MessageBox.Show("Vui lòng nhập Mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            } else
-            {
-                SqlCommand cm = new SqlCommand("INSERT INTO tblUser VALUES('" + username + "', N'" + fullname + "', '" + password + "', '" + email +"')", function.conn);
-                cm.ExecuteNonQuery();
-
-                loadDataGridView();
-                empty();
-            }
-
+            empty();
+            txtUsername.BackColor = Color.White;
+            txtUsername.Enabled = true;
+            txtUsername.Focus();
+            enabledBtn(false, false, false, true, true);
         }
 
         // Cập nhật User
@@ -105,33 +91,62 @@ namespace shop_flycam.control
             string fullname = txtFullname.Text.Trim();
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
-
-            DataTable table = new DataTable();
-            table = function.getData("SELECT COUNT(username) FROM tblUser WHERE username =  '" + username + "'");
             
-            if (table.Rows[0][0].ToString() == "0")
+            if (table.Rows.Count == 0)
             {
-                MessageBox.Show("Tên đăng nhập không tồn tại!.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không còn dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else if (fullname == string.Empty)
+            if (username == string.Empty)
             {
-                MessageBox.Show("Vui lòng nhập Họ tên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn bản ghi nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else if (email == string.Empty)
+            if (fullname == string.Empty)
             {
-                MessageBox.Show("Vui lòng nhập Email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập Họ tên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else if (password == string.Empty)
+            if (email == string.Empty)
             {
-                MessageBox.Show("Vui lòng nhập Mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập Email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else
+            if (password == string.Empty)
             {
-                SqlCommand cm = new SqlCommand("UPDATE tblUser SET fullname = N'" + fullname + "', email = '" + email + "', password = '" + password + "' WHERE username = '" + username + "'" , function.conn);
+                MessageBox.Show("Bạn chưa nhập Mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
+            SqlCommand cm = new SqlCommand("UPDATE tblUser SET fullname = N'" + fullname + "', email = '" + email + "', password = '" + password + "' WHERE username = '" + username + "'" , function.conn);
+            cm.ExecuteNonQuery();
+
+            loadDataGridView();
+            empty();
+            btnCancel.Enabled = false;
+            btnAddUser.Enabled = true;
+        }
+
+        // Xoá User
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text.Trim();
+
+            if (table.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (username == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa chọn bản ghi nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show($"Bạn chắc chắn muốn xoá tài khoản {username} ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SqlCommand cm = new SqlCommand("DELETE FROM tblUser WHERE username = '" + username + "'", function.conn);
                 cm.ExecuteNonQuery();
 
                 loadDataGridView();
@@ -139,46 +154,70 @@ namespace shop_flycam.control
             }
         }
 
-        // Xoá User
-        private void btnDeleteUser_Click(object sender, EventArgs e)
+        // Huỷ bỏ thao tác
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            empty();
+            enabledBtn(true, true, true, false, false);
+            txtUsername.BackColor = Color.FromArgb(240, 240, 240);
+            txtUsername.Enabled = false;
+        }
+
+        // Lưu khi thêm user
+        private void btnSave_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
+            string fullname = txtFullname.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            string sql = "SELECT username FROM tblUser WHERE username = '" + username + "'";
             if (username == string.Empty)
             {
-                MessageBox.Show("Vui lòng điền tên đăng nhập để xoá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập Tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
-            } else
+            }
+            else if (fullname == string.Empty)
             {
-                DataTable table = new DataTable();
-                table = function.getData("SELECT COUNT(username) FROM tblUser WHERE username =  '" + username + "'");
-                if (table.Rows[0][0].ToString() == "0")
-                {
-                    MessageBox.Show("Tên đăng nhập không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                } else
-                {
-                    DialogResult dialogResult = MessageBox.Show($"Bạn chắc chắn muốn xoá tài khoản {username} ?", "??", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        SqlCommand cm = new SqlCommand("DELETE FROM tblUser WHERE username = '" + username + "'", function.conn);
-                        cm.ExecuteNonQuery();
-
-                        loadDataGridView();
-                        empty();
-                    }
-                }
+                MessageBox.Show("Bạn chưa nhập Họ tên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (email == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập Email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (password == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập Mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (function.isExistKey(sql))
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else 
+            {
+                SqlCommand cm = new SqlCommand("INSERT INTO tblUser VALUES('" + username + "', N'" + fullname + "', '" + password + "', '" + email + "')", function.conn);
+                cm.ExecuteNonQuery();
+                loadDataGridView();
+                empty();
+                enabledBtn(true, true, true, false, false);
+                txtUsername.BackColor = Color.FromArgb(240, 240, 240);
+                txtUsername.Enabled = false;
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void dgvUser_Click(object sender, EventArgs e)
         {
-            loadDataGridView();
-            empty();
-        }
+            if (txtUsername.Enabled) return;
+            if (table.Rows.Count == 0) return;
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
+            txtUsername.Text = dgvUser.CurrentRow.Cells["username"].Value.ToString();
+            txtFullname.Text = dgvUser.CurrentRow.Cells["fullname"].Value.ToString();
+            txtEmail.Text = dgvUser.CurrentRow.Cells["email"].Value.ToString();
+            txtPassword.Text = dgvUser.CurrentRow.Cells["password"].Value.ToString();
+            enabledBtn(false, true, true, false, true);
         }
     }
 }

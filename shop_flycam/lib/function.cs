@@ -53,5 +53,16 @@ namespace shop_flycam.lib
             BackGr = Color.FromArgb(red, green, blue);
             return BackGr;
         }
+
+        // Kiểm tra key có tồn tại không
+        public static bool isExistKey(string sql) 
+        {
+            DataTable table = new DataTable();
+            table = getData(sql);
+
+            if (table.Rows.Count > 0)
+                return true;
+            return false;
+        }
     }
 }
