@@ -94,12 +94,12 @@ namespace shop_flycam.control
             
             if (table.Rows.Count == 0)
             {
-                MessageBox.Show("Không còn dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không còn tài khoản để cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (username == string.Empty)
             {
-                MessageBox.Show("Bạn chưa chọn bản ghi nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn tài khoản nào để cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (fullname == string.Empty)
@@ -134,12 +134,12 @@ namespace shop_flycam.control
 
             if (table.Rows.Count == 0)
             {
-                MessageBox.Show("Không còn dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không còn tài khoản để xoá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (username == string.Empty)
             {
-                MessageBox.Show("Bạn chưa chọn bản ghi nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn tài khoản nào để xoá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -176,38 +176,37 @@ namespace shop_flycam.control
                 MessageBox.Show("Bạn chưa nhập Tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else if (fullname == string.Empty)
+            if (fullname == string.Empty)
             {
                 MessageBox.Show("Bạn chưa nhập Họ tên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else if (email == string.Empty)
+            if (email == string.Empty)
             {
                 MessageBox.Show("Bạn chưa nhập Email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else if (password == string.Empty)
+            if (password == string.Empty)
             {
                 MessageBox.Show("Bạn chưa nhập Mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else if (function.isExistKey(sql))
+            if (function.isExistKey(sql))
             {
-                MessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Tên đăng nhập {username} đã tồn tại, vui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else 
-            {
-                SqlCommand cm = new SqlCommand("INSERT INTO tblUser VALUES('" + username + "', N'" + fullname + "', '" + password + "', '" + email + "')", function.conn);
-                cm.ExecuteNonQuery();
-                loadDataGridView();
-                empty();
-                enabledBtn(true, true, true, false, false);
-                txtUsername.BackColor = Color.FromArgb(240, 240, 240);
-                txtUsername.Enabled = false;
-            }
+
+            SqlCommand cm = new SqlCommand("INSERT INTO tblUser VALUES('" + username + "', N'" + fullname + "', '" + password + "', '" + email + "')", function.conn);
+            cm.ExecuteNonQuery();
+            loadDataGridView();
+            empty();
+            enabledBtn(true, true, true, false, false);
+            txtUsername.BackColor = Color.FromArgb(240, 240, 240);
+            txtUsername.Enabled = false;
         }
 
+        // Click dgv
         private void dgvUser_Click(object sender, EventArgs e)
         {
             if (txtUsername.Enabled) return;
