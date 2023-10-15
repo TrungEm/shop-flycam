@@ -91,7 +91,7 @@ namespace shop_flycam.control
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(159, 18);
+            this.btnCancel.Location = new System.Drawing.Point(65, 22);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 70);
             this.btnCancel.TabIndex = 0;
@@ -369,7 +369,7 @@ namespace shop_flycam.control
             this.btnSaveBuyer.ForeColor = System.Drawing.Color.White;
             this.btnSaveBuyer.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveBuyer.Image")));
             this.btnSaveBuyer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveBuyer.Location = new System.Drawing.Point(3, 18);
+            this.btnSaveBuyer.Location = new System.Drawing.Point(243, 22);
             this.btnSaveBuyer.Name = "btnSaveBuyer";
             this.btnSaveBuyer.Size = new System.Drawing.Size(150, 70);
             this.btnSaveBuyer.TabIndex = 0;
@@ -471,7 +471,7 @@ namespace shop_flycam.control
             this.dgvBuyer.RowTemplate.Height = 28;
             this.dgvBuyer.Size = new System.Drawing.Size(1374, 452);
             this.dgvBuyer.TabIndex = 8;
-            this.dgvBuyer.Click += new System.EventHandler(this.dgvBuyer_Click);
+            this.dgvBuyer.DoubleClick += new System.EventHandler(this.dgvBuyer_DoubleClick);
             // 
             // label3
             // 

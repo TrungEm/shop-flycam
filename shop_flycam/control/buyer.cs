@@ -117,7 +117,7 @@ namespace shop_flycam.control
                 return;
             }
 
-            SqlCommand cm = new SqlCommand("UPDATE tblBuyer SET nameBuyer = N'" + fullname + "', address = '" + address + "', phone = '" + phone + "' WHERE codeBuyer = '" + codeBuyer + "'", function.conn);
+            SqlCommand cm = new SqlCommand("UPDATE tblBuyer SET nameBuyer = N'" + fullname + "', address = N'" + address + "', phone = '" + phone + "' WHERE codeBuyer = '" + codeBuyer + "'", function.conn);
             cm.ExecuteNonQuery();
 
             loadDataGridView();
@@ -131,6 +131,7 @@ namespace shop_flycam.control
         {
             string codeBuyer = txtCodeBuyer.Text.Trim();
             string fullname = txtFullnameBuyer.Text.Trim();
+            string sql = "SELECT codeBuyer FROM tblOrder WHERE codeBuyer = '" + codeBuyer + "'";
 
             if (table.Rows.Count == 0)
             {
@@ -142,7 +143,12 @@ namespace shop_flycam.control
                 MessageBox.Show("Bạn chưa chọn khách hàng để xoá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-             
+            if (function.isExistKey(sql))
+            {
+                MessageBox.Show($"Mã khách hàng {codeBuyer} đã phát sinh đơn hàng. Nếu bạn muốn xoá khách hàng {codeBuyer}, bạn cần phải xoá các hoá đơn do khách hàng {codeBuyer} phát sinh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             DialogResult dialogResult = MessageBox.Show($"Bạn chắc chắn muốn xoá khách hàng {fullname} có mã là: {codeBuyer} ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
@@ -197,7 +203,7 @@ namespace shop_flycam.control
                 return;
             }
 
-            SqlCommand cm = new SqlCommand("INSERT INTO tblBuyer VALUES('" + codeBuyer + "', N'" + fullname + "', '" + address + "', '" + phone + "')", function.conn);
+            SqlCommand cm = new SqlCommand("INSERT INTO tblBuyer VALUES('" + codeBuyer + "', N'" + fullname + "', N'" + address + "', '" + phone + "')", function.conn);
             cm.ExecuteNonQuery();
             loadDataGridView();
             empty();
@@ -206,8 +212,8 @@ namespace shop_flycam.control
             txtCodeBuyer.Enabled = false;
         }
 
-        // Click dgv
-        private void dgvBuyer_Click(object sender, EventArgs e)
+        // Double Click dgv
+        private void dgvBuyer_DoubleClick(object sender, EventArgs e)
         {
             if (txtCodeBuyer.Enabled) return;
             if (table.Rows.Count == 0) return;

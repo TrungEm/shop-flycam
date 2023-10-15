@@ -616,7 +616,7 @@ namespace shop_flycam.control
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(226, 70);
             this.button3.TabIndex = 0;
-            this.button3.Text = "      Thêm Flycam";
+            this.button3.Text = "      Thêm vào";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // panel14

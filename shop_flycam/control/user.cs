@@ -206,8 +206,8 @@ namespace shop_flycam.control
             txtUsername.Enabled = false;
         }
 
-        // Click dgv
-        private void dgvUser_Click(object sender, EventArgs e)
+        // DoubleClick dgv
+        private void dgvUser_DoubleClick(object sender, EventArgs e)
         {
             if (txtUsername.Enabled) return;
             if (table.Rows.Count == 0) return;
