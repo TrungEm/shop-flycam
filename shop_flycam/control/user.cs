@@ -151,6 +151,7 @@ namespace shop_flycam.control
 
                 loadDataGridView();
                 empty();
+                enabledBtn(true, true, true, false, false);
             }
         }
 

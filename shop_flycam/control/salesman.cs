@@ -145,7 +145,6 @@ namespace shop_flycam.control
             }
             DateTime birthday = DateTime.Parse(birthdayString);
             birthday = DateTime.Parse(birthday.ToString("dd/MM/yyyy"));
-            //MessageBox.Show();
 
             SqlCommand cm = new SqlCommand("UPDATE tblSalesman SET nameSalesman = N'" + fullname + "', gender = N'" + gender + "', address = N'" + address + "', phone = '" + phone + "', birthday = '" + birthday + "', workStatus = '" + status + "' WHERE codeSalesman = '" + codeSalesman + "'", function.conn);
             cm.ExecuteNonQuery();
@@ -187,6 +186,7 @@ namespace shop_flycam.control
 
                 loadDataGridView();
                 empty();
+                enabledBtn(true, true, true, false, false);
             }
         }
 
