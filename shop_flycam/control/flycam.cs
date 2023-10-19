@@ -61,6 +61,7 @@ namespace shop_flycam.control
             txtQuantity.Text = string.Empty;
             picBoxProduct.Image = null;
             txtPathPhoto.Text = string.Empty;
+            txtSearch.Text = string.Empty;
         }
 
         public flycam()
@@ -193,6 +194,7 @@ namespace shop_flycam.control
             enabledBtn(true, true, true, false, false, false);
             txtCodeProduct.BackColor = Color.FromArgb(240, 240, 240);
             txtCodeProduct.Enabled = false;
+            loadDataGridView();
         }
 
         // Lưu khi thêm sản phẩm
@@ -301,5 +303,24 @@ namespace shop_flycam.control
             }
         }
 
+        // Tìm kiếm flycam
+        private void pictureBoxSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập mã hay tên flycam để tìm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            table = function.getData("SELECT * FROM tblProduct WHERE codeProduct LIKE '%" + txtSearch.Text + "%' OR nameProduct LIKE '%" + txtSearch.Text + "%'");
+            dgvProduct.DataSource = table;
+            dgvProduct.Columns[0].HeaderText = "Mã sản phẩm";
+            dgvProduct.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvProduct.Columns[2].HeaderText = "Số lượng";
+            dgvProduct.Columns[3].HeaderText = "Giá nhập";
+            dgvProduct.Columns[4].HeaderText = "Giá bán";
+            dgvProduct.Columns[5].HeaderText = "Ghi chú";
+            dgvProduct.Columns[6].HeaderText = "Ảnh";
+            btnCancel.Enabled = true;
+        }
     }
 }

@@ -50,6 +50,7 @@ namespace shop_flycam.control
             txtPassword.Text = string.Empty;
             txtFullname.Text = string.Empty;
             txtEmail.Text = string.Empty;
+            txtSearch.Text = string.Empty;
         }
 
         public user()
@@ -162,6 +163,7 @@ namespace shop_flycam.control
             enabledBtn(true, true, true, false, false);
             txtUsername.BackColor = Color.FromArgb(240, 240, 240);
             txtUsername.Enabled = false;
+            loadDataGridView();
         }
 
         // Lưu khi thêm user
@@ -218,6 +220,22 @@ namespace shop_flycam.control
             txtEmail.Text = dgvUser.CurrentRow.Cells["email"].Value.ToString();
             txtPassword.Text = dgvUser.CurrentRow.Cells["password"].Value.ToString();
             enabledBtn(false, true, true, false, true);
+        }
+
+        private void pictureBoxSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập mã hay tên user để tìm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            table = function.getData("SELECT * FROM tblUser WHERE username LIKE '%" + txtSearch.Text + "%' OR fullname LIKE N'%" + txtSearch.Text + "%'");
+            dgvUser.DataSource = table;
+            dgvUser.Columns[0].HeaderText = "Tên đăng nhập";
+            dgvUser.Columns[1].HeaderText = "Họ tên";
+            dgvUser.Columns[2].HeaderText = "Mật khẩu";
+            dgvUser.Columns[3].HeaderText = "Email";
+            btnCancel.Enabled = true;
         }
     }
 }

@@ -49,6 +49,7 @@ namespace shop_flycam.control
             txtFullnameBuyer.Text = string.Empty;
             txtPhoneBuyer.Text = string.Empty;
             txtAddressBuyer.Text = string.Empty;
+            txtSearch.Text = string.Empty;
         }
 
         public buyer()
@@ -168,6 +169,7 @@ namespace shop_flycam.control
             enabledBtn(true, true, true, false, false);
             txtCodeBuyer.BackColor = Color.FromArgb(240, 240, 240);
             txtCodeBuyer.Enabled = false;
+            loadDataGridView();
         }
 
         // Lưu khi thêm khách hàng
@@ -224,6 +226,22 @@ namespace shop_flycam.control
             txtPhoneBuyer.Text = dgvBuyer.CurrentRow.Cells["phone"].Value.ToString();
             txtAddressBuyer.Text = dgvBuyer.CurrentRow.Cells["address"].Value.ToString();
             enabledBtn(false, true, true, false, true);
+        }
+
+        private void pictureBoxSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập mã hay tên khách hàng để tìm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            table = function.getData("SELECT * FROM tblBuyer WHERE codeBuyer LIKE '%" + txtSearch.Text + "%' OR nameBuyer LIKE N'%" + txtSearch.Text + "%'");
+            dgvBuyer.DataSource = table;
+            dgvBuyer.Columns[0].HeaderText = "Mã khách";
+            dgvBuyer.Columns[1].HeaderText = "Tên khách";
+            dgvBuyer.Columns[2].HeaderText = "Địa chỉ";
+            dgvBuyer.Columns[3].HeaderText = "Điện thoại";
+            btnCancel.Enabled = true;
         }
     }
 }

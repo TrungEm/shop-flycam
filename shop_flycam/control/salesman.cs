@@ -59,6 +59,7 @@ namespace shop_flycam.control
             txtBirthday.Text = string.Empty;
             comBoxGender.Text = string.Empty;
             comBoxStatus.Text = string.Empty;
+            txtSearch.Text = string.Empty;
         }
 
         public salesman()
@@ -199,6 +200,7 @@ namespace shop_flycam.control
             enabledBtn(true, true, true, false, false);
             txtCodeSalesman.BackColor = Color.FromArgb(240, 240, 240);
             txtCodeSalesman.Enabled = false;
+            loadDataGridView();
         }
 
         // Lưu khi thêm nhân viên
@@ -279,6 +281,25 @@ namespace shop_flycam.control
             //txtBirthday.Text = birthday.ToString("dd/MM/yyyy");
             txtBirthday.Text = dgvSalesman.CurrentRow.Cells["birthday"].Value.ToString();
             enabledBtn(false, true, true, false, true);
+        }
+
+        private void pictureBoxSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập mã hay tên nhân viên để tìm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            table = function.getData("SELECT * FROM tblSalesman WHERE codeSalesman LIKE '%" + txtSearch.Text + "%' OR nameSalesman LIKE N'%" + txtSearch.Text + "%'");
+            dgvSalesman.DataSource = table;
+            dgvSalesman.Columns[0].HeaderText = "Mã nhân viên";
+            dgvSalesman.Columns[1].HeaderText = "Tên nhân viên";
+            dgvSalesman.Columns[2].HeaderText = "Giới tính";
+            dgvSalesman.Columns[3].HeaderText = "Địa chỉ";
+            dgvSalesman.Columns[4].HeaderText = "Số điện thoại";
+            dgvSalesman.Columns[5].HeaderText = "Ngày sinh";
+            dgvSalesman.Columns[6].HeaderText = "Tình trạng";
+            btnCancel.Enabled = true;
         }
     }
 }
