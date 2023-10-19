@@ -146,11 +146,11 @@ namespace shop_flycam.control
             }
             if (function.isExistKey(sql))
             {
-                MessageBox.Show($"Mã khách hàng {codeBuyer} đã phát sinh đơn hàng. Nếu bạn muốn xoá khách hàng {codeBuyer}, bạn cần phải xoá các hoá đơn do khách hàng {codeBuyer} phát sinh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mã khách hàng " + codeBuyer + " đã phát sinh đơn hàng. Nếu bạn muốn xoá khách hàng " + codeBuyer + ", bạn cần phải xoá các hoá đơn do khách hàng " + codeBuyer + " phát sinh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            DialogResult dialogResult = MessageBox.Show($"Bạn chắc chắn muốn xoá khách hàng {fullname} có mã là: {codeBuyer} ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xoá khách hàng " + fullname + " có mã là: " + codeBuyer + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 SqlCommand cm = new SqlCommand("DELETE FROM tblBuyer WHERE codeBuyer = '" + codeBuyer + "'", function.conn);
@@ -202,7 +202,7 @@ namespace shop_flycam.control
             }
             if (function.isExistKey(sql))
             {
-                MessageBox.Show($"Mã khách hàng {codeBuyer} đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mã khách hàng " + codeBuyer + " đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

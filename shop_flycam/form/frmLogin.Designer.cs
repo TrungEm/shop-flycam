@@ -29,9 +29,10 @@ namespace shop_flycam.form
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.picShow = new System.Windows.Forms.PictureBox();
             this.picHide = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
@@ -41,15 +42,9 @@ namespace shop_flycam.form
             this.lblForgotPassword = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPassword = new ZBobb.AlphaBlendTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUsername = new ZBobb.AlphaBlendTextBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHide)).BeginInit();
@@ -64,6 +59,8 @@ namespace shop_flycam.form
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.txtPassword);
+            this.bunifuGradientPanel1.Controls.Add(this.txtUsername);
             this.bunifuGradientPanel1.Controls.Add(this.picShow);
             this.bunifuGradientPanel1.Controls.Add(this.picHide);
             this.bunifuGradientPanel1.Controls.Add(this.picClose);
@@ -73,30 +70,50 @@ namespace shop_flycam.form
             this.bunifuGradientPanel1.Controls.Add(this.lblForgotPassword);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox3);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
-            this.bunifuGradientPanel1.Controls.Add(this.panel2);
             this.bunifuGradientPanel1.Controls.Add(this.label2);
-            this.bunifuGradientPanel1.Controls.Add(this.txtPassword);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuGradientPanel1.Controls.Add(this.panel1);
             this.bunifuGradientPanel1.Controls.Add(this.label1);
-            this.bunifuGradientPanel1.Controls.Add(this.txtUsername);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(208)))), ((int)(((byte)(199)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(233)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(208)))), ((int)(((byte)(199)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(233)))));
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(610, 660);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(602, 635);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassword.Location = new System.Drawing.Point(110, 369);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(407, 42);
+            this.txtPassword.TabIndex = 16;
+            this.txtPassword.Text = "1234";
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUsername.Location = new System.Drawing.Point(110, 261);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(407, 46);
+            this.txtUsername.TabIndex = 16;
+            this.txtUsername.Text = "admin";
             // 
             // picShow
             // 
             this.picShow.BackColor = System.Drawing.Color.Transparent;
             this.picShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picShow.Image = ((System.Drawing.Image)(resources.GetObject("picShow.Image")));
-            this.picShow.Location = new System.Drawing.Point(501, 367);
+            this.picShow.Location = new System.Drawing.Point(523, 373);
             this.picShow.Name = "picShow";
             this.picShow.Size = new System.Drawing.Size(38, 38);
             this.picShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +126,7 @@ namespace shop_flycam.form
             this.picHide.BackColor = System.Drawing.Color.Transparent;
             this.picHide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHide.Image = ((System.Drawing.Image)(resources.GetObject("picHide.Image")));
-            this.picHide.Location = new System.Drawing.Point(501, 367);
+            this.picHide.Location = new System.Drawing.Point(523, 373);
             this.picHide.Name = "picHide";
             this.picHide.Size = new System.Drawing.Size(38, 38);
             this.picHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,9 +181,9 @@ namespace shop_flycam.form
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(53, 533);
+            this.btnLogin.Location = new System.Drawing.Point(110, 533);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(493, 67);
+            this.btnLogin.Size = new System.Drawing.Size(407, 67);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -208,38 +225,17 @@ namespace shop_flycam.form
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(53, 412);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(493, 3);
-            this.panel2.TabIndex = 0;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(89, 338);
+            this.label2.Location = new System.Drawing.Point(105, 338);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 28);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackAlpha = 0;
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(105, 376);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(390, 38);
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.Text = "1234";
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
@@ -252,48 +248,17 @@ namespace shop_flycam.form
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(53, 304);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 3);
-            this.panel1.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(89, 230);
+            this.label1.Location = new System.Drawing.Point(105, 230);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackAlpha = 0;
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(105, 271);
-            this.txtUsername.Multiline = true;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(441, 46);
-            this.txtUsername.TabIndex = 1;
-            this.txtUsername.Text = "admin";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 10;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 20;
-            this.bunifuElipse2.TargetControl = this.btnLogin;
             // 
             // frmLogin
             // 
@@ -323,23 +288,19 @@ namespace shop_flycam.form
         #endregion
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private ZBobb.AlphaBlendTextBox txtUsername;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblForgotPassword;
         private System.Windows.Forms.Button btnLogin;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picHide;
         private System.Windows.Forms.PictureBox picShow;
-        private ZBobb.AlphaBlendTextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

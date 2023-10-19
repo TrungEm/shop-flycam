@@ -29,18 +29,16 @@ namespace shop_flycam.control
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(flycam));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.dgvFlycam = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtPathPhoto = new System.Windows.Forms.TextBox();
@@ -75,11 +73,9 @@ namespace shop_flycam.control
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFlycam)).BeginInit();
             this.pnlTop.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -94,17 +90,12 @@ namespace shop_flycam.control
             this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnlMain.Controls.Add(this.pictureBoxSearch);
             this.pnlMain.Controls.Add(this.txtSearch);
-            this.pnlMain.Controls.Add(this.dgvProduct);
+            this.pnlMain.Controls.Add(this.dgvFlycam);
             this.pnlMain.Controls.Add(this.label3);
             this.pnlMain.Controls.Add(this.panel7);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -140,32 +131,32 @@ namespace shop_flycam.control
             this.txtSearch.Size = new System.Drawing.Size(305, 43);
             this.txtSearch.TabIndex = 8;
             // 
-            // dgvProduct
+            // dgvFlycam
             // 
-            this.dgvProduct.AllowUserToAddRows = false;
-            this.dgvProduct.AllowUserToDeleteRows = false;
-            this.dgvProduct.AllowUserToResizeColumns = false;
-            this.dgvProduct.AllowUserToResizeRows = false;
+            this.dgvFlycam.AllowUserToAddRows = false;
+            this.dgvFlycam.AllowUserToDeleteRows = false;
+            this.dgvFlycam.AllowUserToResizeColumns = false;
+            this.dgvFlycam.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvFlycam.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFlycam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvFlycam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFlycam.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.dgvFlycam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFlycam.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvFlycam.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProduct.ColumnHeadersHeight = 30;
+            this.dgvFlycam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFlycam.ColumnHeadersHeight = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,23 +164,23 @@ namespace shop_flycam.control
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProduct.EnableHeadersVisualStyles = false;
-            this.dgvProduct.Location = new System.Drawing.Point(0, 136);
-            this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.ReadOnly = true;
-            this.dgvProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvFlycam.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFlycam.EnableHeadersVisualStyles = false;
+            this.dgvFlycam.Location = new System.Drawing.Point(0, 136);
+            this.dgvFlycam.Name = "dgvFlycam";
+            this.dgvFlycam.ReadOnly = true;
+            this.dgvFlycam.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvProduct.RowHeadersWidth = 62;
+            this.dgvFlycam.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvFlycam.RowHeadersWidth = 62;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvProduct.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvProduct.RowTemplate.Height = 28;
-            this.dgvProduct.Size = new System.Drawing.Size(1373, 376);
-            this.dgvProduct.TabIndex = 8;
-            this.dgvProduct.DoubleClick += new System.EventHandler(this.dgvProduct_DoubleClick);
+            this.dgvFlycam.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvFlycam.RowTemplate.Height = 28;
+            this.dgvFlycam.Size = new System.Drawing.Size(1373, 376);
+            this.dgvFlycam.TabIndex = 8;
+            this.dgvFlycam.DoubleClick += new System.EventHandler(this.dgvProduct_DoubleClick);
             // 
             // label3
             // 
@@ -198,7 +189,7 @@ namespace shop_flycam.control
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(103)))));
             this.label3.Location = new System.Drawing.Point(13, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(279, 45);
+            this.label3.Size = new System.Drawing.Size(186, 30);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tìm kiếm Flycam";
             // 
@@ -641,16 +632,6 @@ namespace shop_flycam.control
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 4;
             // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 15;
-            this.bunifuElipse2.TargetControl = this.pnlTop;
-            // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 15;
-            this.bunifuElipse3.TargetControl = this.pnlMain;
-            // 
             // flycam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -665,7 +646,7 @@ namespace shop_flycam.control
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFlycam)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.tableLayoutPanel.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -690,14 +671,10 @@ namespace shop_flycam.control
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCodeProduct;
@@ -725,7 +702,7 @@ namespace shop_flycam.control
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdateProduct;
         private System.Windows.Forms.Button btnUploadImg;
-        private System.Windows.Forms.DataGridView dgvProduct;
+        private System.Windows.Forms.DataGridView dgvFlycam;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCancel;

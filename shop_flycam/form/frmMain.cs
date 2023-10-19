@@ -13,7 +13,7 @@ namespace shop_flycam.form
 {
     public partial class frmMain : Form
     {
-        public string name = "{?}";
+        public string name = "?";
 
         public frmMain()
         {
@@ -34,16 +34,16 @@ namespace shop_flycam.form
             lblName.Text = name;
 
             // Thay đổi backgr
-            Color color = new Color();
-            color = function.getBackColor(0);
-            btnAccount.BackColor = color;
-            btnBuyer.BackColor = color;
-            btnDashboard.BackColor = color;
-            btnFlycam.BackColor = color;
-            btnLogout.BackColor = color;
-            btnOrder.BackColor = color;
-            btnSalesman.BackColor = color;
-            panelSidebar.BackColor = color;
+            //Color color = new Color();
+            //color = function.getBackColor(0);
+           // btnAccount.BackColor = color;
+           // btnBuyer.BackColor = color;
+           // btnDashboard.BackColor = color;
+            //btnFlycam.BackColor = color;
+           // btnLogout.BackColor = color;
+            //btnOrder.BackColor = color;
+            //btnSalesman.BackColor = color;
+            //panelSidebar.BackColor = color;
 
             //color = function.getBackColor(1);
             

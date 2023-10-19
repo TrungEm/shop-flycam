@@ -101,9 +101,9 @@ namespace shop_flycam.control
             string address = txtAddress.Text.Trim();
             string phone = txtPhone.Text.Trim();
             string gender = comBoxGender.Text.Trim();
-            MessageBox.Show(gender);
+            //MessageBox.Show(gender);
             string status = comBoxStatus.Text.Trim();
-            MessageBox.Show(status);
+            //MessageBox.Show(status);
             string birthdayString = txtBirthday.Text.Trim();
             
             if (table.Rows.Count == 0)
@@ -177,11 +177,11 @@ namespace shop_flycam.control
             }
             if (function.isExistKey(sql))
             {
-                MessageBox.Show($"Mã nhân viên {codeSalesman} đã phát sinh đơn hàng. Nếu bạn muốn xoá nhân viên {codeSalesman}, bạn cần phải xoá các hoá đơn do nhân viên {codeSalesman} phát sinh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mã nhân viên " + codeSalesman + " đã phát sinh đơn hàng. Nếu bạn muốn xoá nhân viên " + codeSalesman + ", bạn cần phải xoá các hoá đơn do nhân viên " + codeSalesman + " phát sinh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             
-            DialogResult dialogResult = MessageBox.Show($"Bạn chắc chắn muốn xoá nhân viên {fullname} có mã là: {codeSalesman} ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xoá nhân viên " + fullname + " có mã là: " + codeSalesman + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 SqlCommand cm = new SqlCommand("DELETE FROM tblSalesman WHERE codeSalesman = '" + codeSalesman + "'", function.conn);
@@ -252,7 +252,7 @@ namespace shop_flycam.control
             }
             if (function.isExistKey(sql))
             {
-                MessageBox.Show($"Mã nhân viên {codeSalesman} đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mã nhân viên " + codeSalesman + " đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

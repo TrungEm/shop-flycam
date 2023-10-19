@@ -29,7 +29,6 @@ namespace shop_flycam.form
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelHeader = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
@@ -48,18 +47,15 @@ namespace shop_flycam.form
             this.label2 = new System.Windows.Forms.Label();
             this.picAvatar = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.order = new shop_flycam.control.order();
             this.user = new shop_flycam.control.user();
             this.salesman = new shop_flycam.control.salesman();
             this.buyer = new shop_flycam.control.buyer();
             this.flycam = new shop_flycam.control.flycam();
             this.dashboard = new shop_flycam.control.dashboard();
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,7 +70,7 @@ namespace shop_flycam.form
             // 
             this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.panelHeader.Controls.Add(this.picClose);
             this.panelHeader.Controls.Add(this.label1);
             this.panelHeader.Controls.Add(this.pictureBox1);
@@ -100,7 +96,7 @@ namespace shop_flycam.form
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(62, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(401, 28);
@@ -121,7 +117,7 @@ namespace shop_flycam.form
             // 
             this.panelSidebar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.panelSidebar.Controls.Add(this.pnlActive);
             this.panelSidebar.Controls.Add(this.btnLogout);
             this.panelSidebar.Controls.Add(this.btnAccount);
@@ -134,19 +130,20 @@ namespace shop_flycam.form
             this.panelSidebar.Controls.Add(this.label2);
             this.panelSidebar.Controls.Add(this.picAvatar);
             this.panelSidebar.Controls.Add(this.btnDashboard);
-            this.panelSidebar.Location = new System.Drawing.Point(20, 60);
+            this.panelSidebar.Location = new System.Drawing.Point(0, 45);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(230, 571);
+            this.panelSidebar.Size = new System.Drawing.Size(230, 605);
             this.panelSidebar.TabIndex = 1;
             // 
             // pnlActive
             // 
+            this.pnlActive.BackColor = System.Drawing.Color.Salmon;
             this.pnlActive.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlActive.BackgroundImage")));
             this.pnlActive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlActive.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(208)))), ((int)(((byte)(199)))));
-            this.pnlActive.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(233)))));
-            this.pnlActive.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(208)))), ((int)(((byte)(199)))));
-            this.pnlActive.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(147)))), ((int)(((byte)(233)))));
+            this.pnlActive.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlActive.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlActive.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlActive.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlActive.Location = new System.Drawing.Point(9, 148);
             this.pnlActive.Name = "pnlActive";
             this.pnlActive.Quality = 10;
@@ -157,17 +154,15 @@ namespace shop_flycam.form
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(25, 514);
+            this.btnLogout.Location = new System.Drawing.Point(25, 548);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(188, 44);
             this.btnLogout.TabIndex = 8;
@@ -177,14 +172,12 @@ namespace shop_flycam.form
             // 
             // btnAccount
             // 
-            this.btnAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.btnAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.btnAccount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAccount.FlatAppearance.BorderSize = 0;
-            this.btnAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.White;
             this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccount.Location = new System.Drawing.Point(25, 444);
@@ -197,14 +190,12 @@ namespace shop_flycam.form
             // 
             // btnSalesman
             // 
-            this.btnSalesman.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.btnSalesman.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.btnSalesman.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalesman.FlatAppearance.BorderSize = 0;
-            this.btnSalesman.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnSalesman.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.btnSalesman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalesman.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnSalesman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            this.btnSalesman.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesman.ForeColor = System.Drawing.Color.White;
             this.btnSalesman.Image = ((System.Drawing.Image)(resources.GetObject("btnSalesman.Image")));
             this.btnSalesman.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalesman.Location = new System.Drawing.Point(25, 384);
@@ -217,14 +208,12 @@ namespace shop_flycam.form
             // 
             // btnBuyer
             // 
-            this.btnBuyer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.btnBuyer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.btnBuyer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuyer.FlatAppearance.BorderSize = 0;
-            this.btnBuyer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnBuyer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.btnBuyer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuyer.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnBuyer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            this.btnBuyer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuyer.ForeColor = System.Drawing.Color.White;
             this.btnBuyer.Image = ((System.Drawing.Image)(resources.GetObject("btnBuyer.Image")));
             this.btnBuyer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuyer.Location = new System.Drawing.Point(25, 324);
@@ -237,14 +226,12 @@ namespace shop_flycam.form
             // 
             // btnOrder
             // 
-            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.btnOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
             this.btnOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnOrder.Image")));
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrder.Location = new System.Drawing.Point(25, 264);
@@ -257,14 +244,12 @@ namespace shop_flycam.form
             // 
             // btnFlycam
             // 
-            this.btnFlycam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.btnFlycam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.btnFlycam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFlycam.FlatAppearance.BorderSize = 0;
-            this.btnFlycam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnFlycam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.btnFlycam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFlycam.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnFlycam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            this.btnFlycam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFlycam.ForeColor = System.Drawing.Color.White;
             this.btnFlycam.Image = ((System.Drawing.Image)(resources.GetObject("btnFlycam.Image")));
             this.btnFlycam.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFlycam.Location = new System.Drawing.Point(25, 205);
@@ -289,16 +274,18 @@ namespace shop_flycam.form
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(65, 97);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 32);
+            this.lblName.Size = new System.Drawing.Size(37, 32);
             this.lblName.TabIndex = 2;
-            this.lblName.Text = "{?}";
+            this.lblName.Text = "??";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(51, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 30);
@@ -319,14 +306,12 @@ namespace shop_flycam.form
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(164)))), ((int)(((byte)(254)))));
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(25, 148);
@@ -337,27 +322,14 @@ namespace shop_flycam.form
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this.panelSidebar;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 6;
-            this.bunifuElipse2.TargetControl = this.pnlActive;
-            // 
             // pnlCenter
             // 
-            this.pnlCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnlCenter.Controls.Add(this.panel1);
             this.pnlCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F);
-            this.pnlCenter.Location = new System.Drawing.Point(271, 60);
+            this.pnlCenter.Location = new System.Drawing.Point(230, 45);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(909, 571);
+            this.pnlCenter.Size = new System.Drawing.Size(970, 605);
             this.pnlCenter.TabIndex = 2;
             // 
             // panel1
@@ -372,7 +344,7 @@ namespace shop_flycam.form
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(909, 571);
+            this.panel1.Size = new System.Drawing.Size(970, 605);
             this.panel1.TabIndex = 0;
             // 
             // order
@@ -381,7 +353,7 @@ namespace shop_flycam.form
             this.order.Location = new System.Drawing.Point(0, 0);
             this.order.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.order.Name = "order";
-            this.order.Size = new System.Drawing.Size(909, 571);
+            this.order.Size = new System.Drawing.Size(970, 605);
             this.order.TabIndex = 5;
             this.order.Visible = false;
             // 
@@ -391,7 +363,7 @@ namespace shop_flycam.form
             this.user.Location = new System.Drawing.Point(0, 0);
             this.user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(909, 571);
+            this.user.Size = new System.Drawing.Size(970, 605);
             this.user.TabIndex = 4;
             this.user.Visible = false;
             // 
@@ -401,7 +373,7 @@ namespace shop_flycam.form
             this.salesman.Location = new System.Drawing.Point(0, 0);
             this.salesman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.salesman.Name = "salesman";
-            this.salesman.Size = new System.Drawing.Size(909, 571);
+            this.salesman.Size = new System.Drawing.Size(970, 605);
             this.salesman.TabIndex = 3;
             this.salesman.Visible = false;
             // 
@@ -411,7 +383,7 @@ namespace shop_flycam.form
             this.buyer.Location = new System.Drawing.Point(0, 0);
             this.buyer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buyer.Name = "buyer";
-            this.buyer.Size = new System.Drawing.Size(909, 571);
+            this.buyer.Size = new System.Drawing.Size(970, 605);
             this.buyer.TabIndex = 2;
             this.buyer.Visible = false;
             // 
@@ -422,7 +394,7 @@ namespace shop_flycam.form
             this.flycam.Location = new System.Drawing.Point(0, 0);
             this.flycam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flycam.Name = "flycam";
-            this.flycam.Size = new System.Drawing.Size(909, 571);
+            this.flycam.Size = new System.Drawing.Size(970, 605);
             this.flycam.TabIndex = 1;
             this.flycam.Visible = false;
             // 
@@ -434,13 +406,8 @@ namespace shop_flycam.form
             this.dashboard.Location = new System.Drawing.Point(0, 0);
             this.dashboard.Margin = new System.Windows.Forms.Padding(0);
             this.dashboard.Name = "dashboard";
-            this.dashboard.Size = new System.Drawing.Size(909, 571);
+            this.dashboard.Size = new System.Drawing.Size(970, 605);
             this.dashboard.TabIndex = 0;
-            // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 15;
-            this.bunifuElipse3.TargetControl = this.pnlCenter;
             // 
             // frmMain
             // 
@@ -457,7 +424,6 @@ namespace shop_flycam.form
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
@@ -481,13 +447,11 @@ namespace shop_flycam.form
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDashboard;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnSalesman;
@@ -496,7 +460,6 @@ namespace shop_flycam.form
         private System.Windows.Forms.Button btnFlycam;
         private Bunifu.Framework.UI.BunifuGradientPanel pnlActive;
         private System.Windows.Forms.Panel pnlCenter;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private System.Windows.Forms.Panel panel1;
         private control.dashboard dashboard;
         private control.flycam flycam;

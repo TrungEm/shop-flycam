@@ -29,13 +29,10 @@ namespace shop_flycam.control
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +40,6 @@ namespace shop_flycam.control
             this.label3 = new System.Windows.Forms.Label();
             this.lblQuantityOrder = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlTopDashboard = new System.Windows.Forms.Panel();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -64,9 +60,6 @@ namespace shop_flycam.control
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblQuantityBuyer = new System.Windows.Forms.Label();
-            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlContentDashboard = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -75,10 +68,6 @@ namespace shop_flycam.control
             this.pnlCanlendar = new System.Windows.Forms.Panel();
             this.btnChangeBackColorDown = new System.Windows.Forms.Button();
             this.btnBackColor = new System.Windows.Forms.Button();
-            this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -100,16 +89,6 @@ namespace shop_flycam.control
             this.pnlChangeBG.SuspendLayout();
             this.pnlCanlendar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 30;
-            this.bunifuElipse2.TargetControl = this.panel2;
             // 
             // panel2
             // 
@@ -196,11 +175,6 @@ namespace shop_flycam.control
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 0;
             // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 15;
-            this.bunifuElipse3.TargetControl = this.pnlTopDashboard;
-            // 
             // pnlTopDashboard
             // 
             this.pnlTopDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
@@ -253,10 +227,10 @@ namespace shop_flycam.control
             this.bunifuGradientPanel4.Controls.Add(this.label12);
             this.bunifuGradientPanel4.Controls.Add(this.lblQuantityAccount);
             this.bunifuGradientPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(158)))), ((int)(((byte)(62)))));
-            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(190)))), ((int)(((byte)(25)))));
+            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(169)))), ((int)(((byte)(33)))));
+            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(169)))), ((int)(((byte)(33)))));
             this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(169)))), ((int)(((byte)(33)))));
-            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(213)))), ((int)(((byte)(1)))));
+            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(169)))), ((int)(((byte)(33)))));
             this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
@@ -331,10 +305,10 @@ namespace shop_flycam.control
             this.bunifuGradientPanel3.Controls.Add(this.label9);
             this.bunifuGradientPanel3.Controls.Add(this.lblQuantitySalesman);
             this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.Chartreuse;
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.Green;
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuGradientPanel3.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
@@ -410,9 +384,9 @@ namespace shop_flycam.control
             this.bunifuGradientPanel2.Controls.Add(this.lblQuantityBuyer);
             this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(146)))), ((int)(((byte)(219)))));
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(234)))), ((int)(((byte)(224)))));
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(125)))), ((int)(((byte)(222)))));
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(215)))), ((int)(((byte)(226)))));
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(146)))), ((int)(((byte)(219)))));
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(146)))), ((int)(((byte)(219)))));
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(146)))), ((int)(((byte)(219)))));
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
@@ -467,21 +441,6 @@ namespace shop_flycam.control
             this.lblQuantityBuyer.Text = "?";
             this.lblQuantityBuyer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // bunifuElipse4
-            // 
-            this.bunifuElipse4.ElipseRadius = 30;
-            this.bunifuElipse4.TargetControl = this.panel3;
-            // 
-            // bunifuElipse5
-            // 
-            this.bunifuElipse5.ElipseRadius = 30;
-            this.bunifuElipse5.TargetControl = this.panel4;
-            // 
-            // bunifuElipse6
-            // 
-            this.bunifuElipse6.ElipseRadius = 30;
-            this.bunifuElipse6.TargetControl = this.panel5;
-            // 
             // pnlContentDashboard
             // 
             this.pnlContentDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
@@ -510,17 +469,17 @@ namespace shop_flycam.control
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea1.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend2);
             this.chartRevenue.Location = new System.Drawing.Point(0, -3);
             this.chartRevenue.Name = "chartRevenue";
             this.chartRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh thu";
-            this.chartRevenue.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Doanh thu";
+            this.chartRevenue.Series.Add(series2);
             this.chartRevenue.Size = new System.Drawing.Size(968, 557);
             this.chartRevenue.TabIndex = 1;
             this.chartRevenue.Text = "chart1";
@@ -543,7 +502,7 @@ namespace shop_flycam.control
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.monthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.monthCalendar1.Location = new System.Drawing.Point(65, 70);
+            this.monthCalendar1.Location = new System.Drawing.Point(44, 38);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 2;
             // 
@@ -591,26 +550,6 @@ namespace shop_flycam.control
             this.btnBackColor.UseVisualStyleBackColor = false;
             this.btnBackColor.Click += new System.EventHandler(this.btnBackColor_Click);
             // 
-            // bunifuElipse7
-            // 
-            this.bunifuElipse7.ElipseRadius = 15;
-            this.bunifuElipse7.TargetControl = this.pnlContentDashboard;
-            // 
-            // bunifuElipse8
-            // 
-            this.bunifuElipse8.ElipseRadius = 15;
-            this.bunifuElipse8.TargetControl = this.chartRevenue;
-            // 
-            // bunifuElipse9
-            // 
-            this.bunifuElipse9.ElipseRadius = 15;
-            this.bunifuElipse9.TargetControl = this.pnlCanlendar;
-            // 
-            // bunifuElipse10
-            // 
-            this.bunifuElipse10.ElipseRadius = 15;
-            this.bunifuElipse10.TargetControl = this.pnlChangeBG;
-            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -651,13 +590,6 @@ namespace shop_flycam.control
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnlTopDashboard;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
@@ -682,20 +614,16 @@ namespace shop_flycam.control
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pnlContentDashboard;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse7;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRevenue;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
         private System.Windows.Forms.Panel pnlCanlendar;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
         private System.Windows.Forms.Panel pnlChangeBG;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnBackColor;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Button btnChangeBackColorDown;
     }

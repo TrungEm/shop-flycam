@@ -19,7 +19,7 @@ namespace shop_flycam.form
             InitializeComponent();
         }
 
-        private void emptyBox()
+        private void empty()
         {
             txtUsername.Clear();
             txtPassword.Clear();
@@ -59,11 +59,11 @@ namespace shop_flycam.form
         {
             if (txtUsername.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Vui lòng nhập Tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập Tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             } else if (txtPassword.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Vui lòng nhập Mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập Mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             } else
             {
@@ -82,7 +82,7 @@ namespace shop_flycam.form
                     formMain.ShowDialog();
 
 
-                    emptyBox();
+                    empty();
 
                 } else
                 {
@@ -95,7 +95,7 @@ namespace shop_flycam.form
         // Show form khôi phục mật khẩu
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
-            emptyBox();
+            empty();
             frmForgotPassword frmForPass = new frmForgotPassword();
             frmForPass.ShowDialog();
         }

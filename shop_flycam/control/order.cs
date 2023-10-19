@@ -47,7 +47,7 @@ namespace shop_flycam.control
 
             table = function.getData("SELECT a.codeProduct, a.nameProduct, b.quantity, b.unitPrice, b.intoMoney FROM tblProduct AS a, tblOrderDetails AS b WHERE a.codeProduct = b.codeProduct AND b.codeOrder = '" + txtCodeOrder.Text + "'");
             dgvOrder.DataSource = table;
-            dgvOrder.Columns[0].HeaderText = "Mã hàng";
+            dgvOrder.Columns[0].HeaderText = "Mã flycam";
             dgvOrder.Columns[1].HeaderText = "Tên hàng";
             dgvOrder.Columns[2].HeaderText = "Số lượng";
             dgvOrder.Columns[3].HeaderText = "Đơn giá";
@@ -157,7 +157,7 @@ namespace shop_flycam.control
 
             if (comboBoxCodeProduct.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Bạn phải nhập mã hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập mã flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 comboBoxCodeProduct.Focus();
                 return;
             }
@@ -172,7 +172,7 @@ namespace shop_flycam.control
             
             if (function.isExistKey(sql))
             {
-                MessageBox.Show("Mã hàng này đã có, bạn phải nhập mã khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mã flycam này đã có, bạn phải nhập mã khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 comboBoxCodeProduct.Text = string.Empty;
                 txtQuantity.Text = string.Empty;
                 txtUnitPrice.Text = "0";
@@ -183,7 +183,7 @@ namespace shop_flycam.control
             int quantity = Convert.ToInt32(function.getValue("SELECT quantity FROM tblProduct WHERE codeProduct = '" + comboBoxCodeProduct.Text + "'"));
             if (Convert.ToInt32(txtQuantity.Text) > quantity)
             {
-                MessageBox.Show($"Số lượng flycam này chỉ còn {quantity}.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Số lượng flycam này chỉ còn " + quantity + ".", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtQuantity.Text = "";
                 txtQuantity.Focus();
                 return;

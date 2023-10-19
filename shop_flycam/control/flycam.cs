@@ -30,24 +30,24 @@ namespace shop_flycam.control
             panel6.BackColor = color;
             panel8.BackColor = color;
             pnlMain.BackColor = color;
-            dgvProduct.BackgroundColor = color;
+            dgvFlycam.BackgroundColor = color;
             tableLayoutPanel.BackColor = color;
         }
 
         // Load data ra dgv
         public void loadDataGridView()
         {
-            dgvProduct.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            dgvFlycam.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
 
             table = function.getData("SELECT * FROM tblProduct");
-            dgvProduct.DataSource = table;
-            dgvProduct.Columns[0].HeaderText = "Mã sản phẩm";
-            dgvProduct.Columns[1].HeaderText = "Tên sản phẩm";
-            dgvProduct.Columns[2].HeaderText = "Số lượng";
-            dgvProduct.Columns[3].HeaderText = "Giá nhập";
-            dgvProduct.Columns[4].HeaderText = "Giá bán";
-            dgvProduct.Columns[5].HeaderText = "Ghi chú";
-            dgvProduct.Columns[6].HeaderText = "Ảnh";
+            dgvFlycam.DataSource = table;
+            dgvFlycam.Columns[0].HeaderText = "Mã sản phẩm";
+            dgvFlycam.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvFlycam.Columns[2].HeaderText = "Số lượng";
+            dgvFlycam.Columns[3].HeaderText = "Giá nhập";
+            dgvFlycam.Columns[4].HeaderText = "Giá bán";
+            dgvFlycam.Columns[5].HeaderText = "Ghi chú";
+            dgvFlycam.Columns[6].HeaderText = "Ảnh";
         }
 
         // Set các textbox rỗng
@@ -109,37 +109,37 @@ namespace shop_flycam.control
             
             if (table.Rows.Count == 0)
             {
-                MessageBox.Show("Không còn sản phẩm để cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không còn flycam để cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (codeProduct == string.Empty)
             {
-                MessageBox.Show("Bạn chưa chọn sản phẩm nào để cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn flycam nào để cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (nameProduct == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập tên sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập tên flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (quantity == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập số lượng sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập số lượng flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (priceInput == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập giá nhập sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập giá nhập flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (pathPhoto == string.Empty)
             {
-                MessageBox.Show("Bạn chưa chọn ảnh sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn ảnh flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (priceOutput == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập giá bán sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập giá bán flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             
@@ -161,21 +161,21 @@ namespace shop_flycam.control
 
             if (table.Rows.Count == 0)
             {
-                MessageBox.Show("Không còn sản phẩm để xoá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không còn flycam để xoá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (codeProduct == string.Empty)
             {
-                MessageBox.Show("Bạn chưa chọn sản phẩm nào để xoá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn flycam nào để xoá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (function.isExistKey(sql))
             {
-                MessageBox.Show($"Mã sản phẩm {codeProduct} đã có trong đơn hàng đơn hàng. Nếu bạn muốn xoá sản phẩm {codeProduct}, bạn cần phải xoá các hoá đơn có sản phẩm {codeProduct} phát sinh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mã sản phẩm " + codeProduct + " đã có trong đơn hàng đơn hàng. Nếu bạn muốn xoá flycam {codeProduct}, bạn cần phải xoá các hoá đơn có flycam {codeProduct} phát sinh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            DialogResult dialogResult = MessageBox.Show($"Bạn chắc chắn muốn xoá sản phẩm {nameProduct} có mã là: {codeProduct} ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xoá sản phẩm" + nameProduct + " có mã là: " + codeProduct + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 SqlCommand cm = new SqlCommand("DELETE FROM tblProduct WHERE codeProduct = '" + codeProduct + "'", function.conn);
@@ -211,37 +211,37 @@ namespace shop_flycam.control
             
             if (codeProduct == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập mã sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập mã flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (nameProduct == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập tên sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập tên flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (quantity == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập số lượng sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập số lượng flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (priceInput == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập giá nhập sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập giá nhập flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (priceOutput == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập giá bán sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập giá bán flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (pathPhoto == string.Empty)
             {
-                MessageBox.Show("Bạn chưa chọn ảnh sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn ảnh flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (function.isExistKey(sql))
             {
-                MessageBox.Show($"Mã sản phẩm {codeProduct} đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mã flycam " + codeProduct + " đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -260,13 +260,13 @@ namespace shop_flycam.control
             if (txtCodeProduct.Enabled) return;
             if (table.Rows.Count == 0) return;
 
-            txtCodeProduct.Text = dgvProduct.CurrentRow.Cells["codeProduct"].Value.ToString();
-            txtNameProduct.Text = dgvProduct.CurrentRow.Cells["nameProduct"].Value.ToString();
-            txtQuantity.Text = dgvProduct.CurrentRow.Cells["quantity"].Value.ToString();
-            txtPriceInput.Text = dgvProduct.CurrentRow.Cells["inputPrice"].Value.ToString();
-            txtPriceOutput.Text = dgvProduct.CurrentRow.Cells["outPrice"].Value.ToString();
-            txtConment.Text = dgvProduct.CurrentRow.Cells["comment"].Value.ToString();
-            txtPathPhoto.Text = dgvProduct.CurrentRow.Cells["image"].Value.ToString();
+            txtCodeProduct.Text = dgvFlycam.CurrentRow.Cells["codeProduct"].Value.ToString();
+            txtNameProduct.Text = dgvFlycam.CurrentRow.Cells["nameProduct"].Value.ToString();
+            txtQuantity.Text = dgvFlycam.CurrentRow.Cells["quantity"].Value.ToString();
+            txtPriceInput.Text = dgvFlycam.CurrentRow.Cells["inputPrice"].Value.ToString();
+            txtPriceOutput.Text = dgvFlycam.CurrentRow.Cells["outPrice"].Value.ToString();
+            txtConment.Text = dgvFlycam.CurrentRow.Cells["comment"].Value.ToString();
+            txtPathPhoto.Text = dgvFlycam.CurrentRow.Cells["image"].Value.ToString();
             //MessageBox.Show(dgvProduct.CurrentRow.Cells["image"].Value.ToString());
             picBoxProduct.Image = Image.FromFile(txtPathPhoto.Text);
             enabledBtn(false, true, true, false, true, true);
@@ -312,14 +312,14 @@ namespace shop_flycam.control
                 return;
             }
             table = function.getData("SELECT * FROM tblProduct WHERE codeProduct LIKE '%" + txtSearch.Text + "%' OR nameProduct LIKE '%" + txtSearch.Text + "%'");
-            dgvProduct.DataSource = table;
-            dgvProduct.Columns[0].HeaderText = "Mã sản phẩm";
-            dgvProduct.Columns[1].HeaderText = "Tên sản phẩm";
-            dgvProduct.Columns[2].HeaderText = "Số lượng";
-            dgvProduct.Columns[3].HeaderText = "Giá nhập";
-            dgvProduct.Columns[4].HeaderText = "Giá bán";
-            dgvProduct.Columns[5].HeaderText = "Ghi chú";
-            dgvProduct.Columns[6].HeaderText = "Ảnh";
+            dgvFlycam.DataSource = table;
+            dgvFlycam.Columns[0].HeaderText = "Mã sản phẩm";
+            dgvFlycam.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvFlycam.Columns[2].HeaderText = "Số lượng";
+            dgvFlycam.Columns[3].HeaderText = "Giá nhập";
+            dgvFlycam.Columns[4].HeaderText = "Giá bán";
+            dgvFlycam.Columns[5].HeaderText = "Ghi chú";
+            dgvFlycam.Columns[6].HeaderText = "Ảnh";
             btnCancel.Enabled = true;
         }
     }

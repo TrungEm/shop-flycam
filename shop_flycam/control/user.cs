@@ -144,7 +144,7 @@ namespace shop_flycam.control
                 return;
             }
 
-            DialogResult dialogResult = MessageBox.Show($"Bạn chắc chắn muốn xoá tài khoản {username} ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xoá tài khoản " + username + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 SqlCommand cm = new SqlCommand("DELETE FROM tblUser WHERE username = '" + username + "'", function.conn);
@@ -196,7 +196,7 @@ namespace shop_flycam.control
             }
             if (function.isExistKey(sql))
             {
-                MessageBox.Show($"Tên đăng nhập {username} đã tồn tại, vui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tên đăng nhập " + username + " đã tồn tại, vui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

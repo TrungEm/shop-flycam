@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>995, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBoxSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -140,6 +137,27 @@
         RJ395J5fhJsS4Yr+g6lGjbIJBP4A3rYbP8tiEswAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAUdJREFUSEvt
+        lDFKA1EQhleUIAQ8Qw7gAbTzAik8gfaChSewFGwESZ/G1kJs0gUrSxvBTkuPIFg8v39mItnNZnfdjSCS
+        D37emzf/zLCw72VrfoWU0i46Q+c/1Gm0aAYF+6gL19GqHswXXpPe0RQ9WpTnBSmnVXygZ98al9GuGoxj
+        96dxxAMPcxxH7sjD9Iq20L1FTv0XYmo1LGINvLUTp3oghibDirxZMbDfRDd26iz/aUh2GiaIN9CDZaJP
+        KUq653vYNjqo0Z4Vz8FZrk8pSrqnwtQA1XubvzyMfR8dorJXYybl+1HSadjEj2qZREm7Yaw76NNO/DXR
+        y1HU7JWRz76OtdWw+V9/YKYCOve0YR7W9TDj/w0buSc9Id2fK4sc7Yv3a5lH9WIUrRchOXTPyhhG60VI
+        9tAJukNld6qpVK8+vWi9ZlVk2RedY8/c24O8LgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnDeleteUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAOpJREFUSEvt
+        lEsKwjAQQOMd1ANobVNcitKJuvYo7gXFnZ5CT6b0AFIbUxfiAWpSJ9BWu2hJd3mQxXyYR0IYYrFYfkgJ
+        6QjKjpE76WLqL48xOMKDLYbNED47CQqp8OEaD1kf0wW4w4ayJ1J9iR/sMF2fxGVTOeSdCSmE5Rvy0WIg
+        8zHWYxVjqRlVQuMiTVnIvWCuBBibE2lKQn1uxkUaOXydl3EKKyyZBW/2ysvkaf0JwydloEQYt/c5WvuN
+        VSKNUaHcHGccdLk7yx6mCwg6c2Wdq76Ewh7T9fnuxuBQJdJku5EGGwwtFkseQj5gocPd/hKpGQAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
   <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAeFJREFUSEvt
@@ -152,17 +170,6 @@
         phIdsPTP+Zj7U8f+H3Og8buLeGaw4JuZ9SKctGYxoKWnodnCyy7m2cNuLFFLFmr1uIiBWSy8MR5CoAKX
         LH0Pe70soG0C+9zHsHuNCfygEcmwIA5iOFXi2ME2xV4Gg+yhrWi/pb1iVnEFf+Bntb1bMpk7WE+/jk5N
         BlgAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAUdJREFUSEvt
-        lDFKA1EQhleUIAQ8Qw7gAbTzAik8gfaChSewFGwESZ/G1kJs0gUrSxvBTkuPIFg8v39mItnNZnfdjSCS
-        D37emzf/zLCw72VrfoWU0i46Q+c/1Gm0aAYF+6gL19GqHswXXpPe0RQ9WpTnBSmnVXygZ98al9GuGoxj
-        96dxxAMPcxxH7sjD9Iq20L1FTv0XYmo1LGINvLUTp3oghibDirxZMbDfRDd26iz/aUh2GiaIN9CDZaJP
-        KUq653vYNjqo0Z4Vz8FZrk8pSrqnwtQA1XubvzyMfR8dorJXYybl+1HSadjEj2qZREm7Yaw76NNO/DXR
-        y1HU7JWRz76OtdWw+V9/YKYCOve0YR7W9TDj/w0buSc9Id2fK4sc7Yv3a5lH9WIUrRchOXTPyhhG60VI
-        9tAJukNld6qpVK8+vWi9ZlVk2RedY8/c24O8LgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnUpdateUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -188,20 +195,4 @@
         oeAQ7zD3Bm7qFA98ZE+XVNUPHC+/79WiMYgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnDeleteUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAOpJREFUSEvt
-        lEsKwjAQQOMd1ANobVNcitKJuvYo7gXFnZ5CT6b0AFIbUxfiAWpSJ9BWu2hJd3mQxXyYR0IYYrFYfkgJ
-        6QjKjpE76WLqL48xOMKDLYbNED47CQqp8OEaD1kf0wW4w4ayJ1J9iR/sMF2fxGVTOeSdCSmE5Rvy0WIg
-        8zHWYxVjqRlVQuMiTVnIvWCuBBibE2lKQn1uxkUaOXydl3EKKyyZBW/2ysvkaf0JwydloEQYt/c5WvuN
-        VSKNUaHcHGccdLk7yx6mCwg6c2Wdq76Ewh7T9fnuxuBQJdJku5EGGwwtFkseQj5gocPd/hKpGQAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <metadata name="bunifuElipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1158, 17</value>
-  </metadata>
-  <metadata name="bunifuElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1321, 17</value>
-  </metadata>
 </root>

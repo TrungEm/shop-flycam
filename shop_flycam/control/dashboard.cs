@@ -55,12 +55,10 @@ namespace shop_flycam.control
         private void dashboard_Load(object sender, EventArgs e)
         {
             // Dữ liệu đồ thị
-            chartRevenue.Series["Doanh thu"].Points.AddXY(2020, 40500000);
-            chartRevenue.Series["Doanh thu"].Points.AddXY(2021, 30900000);
-            chartRevenue.Series["Doanh thu"].Points.AddXY(2022, 54200000);
-            chartRevenue.Series["Doanh thu"].Points.AddXY(2022, 53500000);
-            chartRevenue.Series["Doanh thu"].Points.AddXY(2023, 50500000);
-            chartRevenue.Series["Doanh thu"].Points.AddXY(2024, 63500000);
+            chartRevenue.Series["Doanh thu"].Points.AddXY(2023, 40500000);
+            chartRevenue.Series["Doanh thu"].Points.AddXY(2024, 30900000);
+            chartRevenue.Series["Doanh thu"].Points.AddXY(2025, 54200000);
+            chartRevenue.Series["Doanh thu"].Points.AddXY(2026, 53500000);
 
             // Lấy dữ liệu số lượng
             loadData();

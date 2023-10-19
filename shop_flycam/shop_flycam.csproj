@@ -265,10 +265,12 @@
       <DependentUpon>QLShopFlycam.mdf</DependentUpon>
     </Content>
     <Content Include="res\add.png" />
+    <Content Include="res\cart-add-white.png" />
     <Content Include="res\cart-add.png" />
     <Content Include="res\cart-light.png" />
     <Content Include="res\check.png" />
     <Content Include="res\close.png" />
+    <Content Include="res\dashboard-white.png" />
     <Content Include="res\delete-2.png" />
     <Content Include="res\delete.png" />
     <Content Include="res\edit.png" />
@@ -278,13 +280,17 @@
     <Content Include="res\eye-view.png" />
     <Content Include="res\hide.png" />
     <Content Include="res\id-card-light.png" />
+    <Content Include="res\id-card-white.png" />
     <Content Include="res\id-card.png" />
     <Content Include="res\lock.png" />
+    <Content Include="res\log-out-white.png" />
     <Content Include="res\log-out.png" />
     <Content Include="res\logo.png" />
     <Content Include="res\male-female-light.png" />
+    <Content Include="res\male-female-white.png" />
     <Content Include="res\male-female.png" />
     <Content Include="res\plane-light.png" />
+    <Content Include="res\plane-white.png" />
     <Content Include="res\plane.png" />
     <Content Include="res\printer.png" />
     <Content Include="res\revision.png" />
@@ -292,6 +298,7 @@
     <Content Include="res\search.png" />
     <Content Include="res\upload.png" />
     <Content Include="res\user-account-light.png" />
+    <Content Include="res\user-account-white.png" />
     <Content Include="res\user-account.png" />
     <Content Include="res\user.png" />
     <Content Include="res\view.png" />

@@ -25,17 +25,17 @@ namespace shop_flycam.form
             Close();
         }
 
-        // Sử lý reset password
+        // Sử lý cấp lại password
         private void btnResetPassword_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Vui lòng nhập Tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập Tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else if (txtEmail.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Vui lòng nhập Email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập Email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
@@ -47,7 +47,7 @@ namespace shop_flycam.form
                 {
                     table = function.getData("SELECT password FROM tblUser WHERE username = '" + txtUsername.Text.Trim() + "' AND email = '" + txtEmail.Text.Trim() + "'");
                     
-                    MessageBox.Show($"Mật khẩu của bạn là: {table.Rows[0][0]}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Mật khẩu của bạn là: " + table.Rows[0][0], "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 else
