@@ -265,7 +265,7 @@ namespace shop_flycam.control
             txtPriceOutput.Text = dgvProduct.CurrentRow.Cells["outPrice"].Value.ToString();
             txtConment.Text = dgvProduct.CurrentRow.Cells["comment"].Value.ToString();
             txtPathPhoto.Text = dgvProduct.CurrentRow.Cells["image"].Value.ToString();
-            MessageBox.Show(dgvProduct.CurrentRow.Cells["image"].Value.ToString());
+            //MessageBox.Show(dgvProduct.CurrentRow.Cells["image"].Value.ToString());
             picBoxProduct.Image = Image.FromFile(txtPathPhoto.Text);
             enabledBtn(false, true, true, false, true, true);
         }

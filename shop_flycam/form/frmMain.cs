@@ -77,6 +77,7 @@ namespace shop_flycam.form
         {
             moveActive(btnFlycam);
             //flycam.loadBackColor();
+            flycam.loadDataGridView();
 
             dashboard.Visible = false;
             flycam.Visible = true;
@@ -90,6 +91,7 @@ namespace shop_flycam.form
         {
             moveActive(btnOrder);
             //order.loadBackColor();
+            order.loadInfoCompoBox();
 
             dashboard.Visible = false;
             flycam.Visible = false;
@@ -103,6 +105,7 @@ namespace shop_flycam.form
         {
             moveActive(btnBuyer);
             //buyer.loadBackColor();
+            buyer.loadDataGridView();
 
             dashboard.Visible = false;
             flycam.Visible = false;
@@ -116,6 +119,7 @@ namespace shop_flycam.form
         {
             moveActive(btnSalesman);
             //salesman.loadBackColor();
+            salesman.loadDataGridView();
 
             dashboard.Visible = false;
             flycam.Visible = false;
@@ -129,6 +133,7 @@ namespace shop_flycam.form
         {
             moveActive(btnAccount);
             //user.loadBackColor();
+            user.loadDataGridView();
 
             dashboard.Visible = false;
             flycam.Visible = false;

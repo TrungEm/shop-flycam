@@ -100,7 +100,9 @@ namespace shop_flycam.control
             string address = txtAddress.Text.Trim();
             string phone = txtPhone.Text.Trim();
             string gender = comBoxGender.Text.Trim();
+            MessageBox.Show(gender);
             string status = comBoxStatus.Text.Trim();
+            MessageBox.Show(status);
             string birthdayString = txtBirthday.Text.Trim();
             
             if (table.Rows.Count == 0)
@@ -143,10 +145,10 @@ namespace shop_flycam.control
                 MessageBox.Show("Bạn chưa chọn tình trạng làm việc của nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            DateTime birthday = DateTime.Parse(birthdayString);
-            birthday = DateTime.Parse(birthday.ToString("dd/MM/yyyy"));
+            //DateTime birthday = DateTime.Parse(birthdayString);
+            //birthday = DateTime.Parse(birthday.ToString("dd/MM/yyyy"));
 
-            SqlCommand cm = new SqlCommand("UPDATE tblSalesman SET nameSalesman = N'" + fullname + "', gender = N'" + gender + "', address = N'" + address + "', phone = '" + phone + "', birthday = '" + birthday + "', workStatus = '" + status + "' WHERE codeSalesman = '" + codeSalesman + "'", function.conn);
+            SqlCommand cm = new SqlCommand("UPDATE tblSalesman SET nameSalesman = N'" + fullname + "', gender = N'" + gender + "', address = N'" + address + "', phone = '" + phone + "', birthday = '" + birthdayString + "', workStatus = '" + status + "' WHERE codeSalesman = '" + codeSalesman + "'", function.conn);
             cm.ExecuteNonQuery();
 
             loadDataGridView();
@@ -273,8 +275,9 @@ namespace shop_flycam.control
             txtPhone.Text = dgvSalesman.CurrentRow.Cells["phone"].Value.ToString();
             comBoxStatus.Text = dgvSalesman.CurrentRow.Cells["workStatus"].Value.ToString();
             comBoxGender.Text = dgvSalesman.CurrentRow.Cells["gender"].Value.ToString();
-            DateTime birthday = DateTime.Parse(dgvSalesman.CurrentRow.Cells["birthday"].Value.ToString());
-            txtBirthday.Text = birthday.ToString("dd/MM/yyyy");
+            //DateTime birthday = DateTime.Parse(dgvSalesman.CurrentRow.Cells["birthday"].Value.ToString());
+            //txtBirthday.Text = birthday.ToString("dd/MM/yyyy");
+            txtBirthday.Text = dgvSalesman.CurrentRow.Cells["birthday"].Value.ToString();
             enabledBtn(false, true, true, false, true);
         }
     }

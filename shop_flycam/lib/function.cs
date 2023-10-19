@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace shop_flycam.lib
 {
@@ -40,6 +41,19 @@ namespace shop_flycam.lib
             return table;
         }
 
+        public static string getValue(string sql)
+        {
+            DataTable table = new DataTable();
+            table = getData(sql);
+            string str = "";
+            if (table.Rows.Count > 0)
+            {
+                str = table.Rows[0][0].ToString();
+            }
+            table.Clear();
+            return str;
+        }
+
         // Lấy mã màu BackColor
         public static Color getBackColor(int id)
         {
@@ -63,6 +77,28 @@ namespace shop_flycam.lib
             if (table.Rows.Count > 0)
                 return true;
             return false;
+        }
+
+        // Nạp dữ liệu vào compobox
+        public static void loadComboBox(string sql, ComboBox combo, string code)
+        {
+            SqlDataAdapter dap = new SqlDataAdapter(sql, conn);
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            combo.DataSource = table;
+            combo.ValueMember = code; //Trường giá trị
+            combo.DisplayMember = code; //Trường hiển thị
+        }
+
+        // Random mã đơn hàng
+        public static string randomCodeOrder(string prefix)
+        {
+            int second = (int)DateTime.Now.Second;
+            int minute = (int)DateTime.Now.Minute;
+            int day = (int)DateTime.Now.Day;
+            int month = (int)DateTime.Now.Month;
+            string str = prefix + second.ToString() + minute.ToString() + day.ToString() + month.ToString();
+            return str;
         }
     }
 }
