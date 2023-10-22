@@ -121,7 +121,7 @@ namespace shop_flycam.control
         // Thêm đơn hàng
         private void btnAddOrder_Click(object sender, EventArgs e)
         {
-            btnDelete.Enabled = false;
+            btnDelete.Enabled = true;
             btnSave.Enabled = true;
             btnAddOrder.Enabled = false;
             btnCancel.Enabled = true;
@@ -225,6 +225,7 @@ namespace shop_flycam.control
             btnCancel.Enabled = false;
             btnDelete.Enabled = true;
             btnSave.Enabled = false;
+            loadDataGridView();
         }
 
         private void comboBoxCodeSalesman_TextChanged(object sender, EventArgs e)
@@ -301,6 +302,70 @@ namespace shop_flycam.control
             txtCodeOrder.Text = comboBoxSearch.Text;
             loadInfoOrder();
             loadDataGridView();
+            btnCancel.Enabled = true;
+            btnDelete.Enabled = true;
+        }
+
+        // Xoá sản phẩm trong bảng hoá đơn
+        private void dgvOrder_DoubleClick(object sender, EventArgs e)
+        {
+            if (table.Rows.Count == 0) return;
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xoá flycam này không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                string codeProductDe = dgvOrder.CurrentRow.Cells["codeProduct"].Value.ToString();
+                int quantityDe = Convert.ToInt32(dgvOrder.CurrentRow.Cells["quantity"].Value.ToString());
+                double intoMoneyDe = Convert.ToDouble(dgvOrder.CurrentRow.Cells["intoMoney"].Value.ToString());
+                
+                SqlCommand cm = new SqlCommand("DELETE tblOrderDetails WHERE codeOrder = '" + txtCodeOrder.Text + "' AND codeProduct = '" + codeProductDe + "'", function.conn);
+                cm.ExecuteNonQuery();
+                
+                int quantity = Convert.ToInt32(function.getValue("SELECT quantity FROM tblProduct WHERE codeProduct = '" + codeProductDe + "'"));
+                int quantityNew = quantity + quantityDe;
+                SqlCommand cm2 = new SqlCommand("UPDATE tblProduct SET quantity = " + quantityNew + " WHERE codeProduct= '" + codeProductDe + "'", function.conn);
+                cm2.ExecuteNonQuery();
+                
+                double sumMoney = Convert.ToDouble(function.getValue("SELECT sumMoney FROM tblOrder WHERE codeOrder = '" + txtCodeOrder.Text + "'"));
+                double sumMoneyNew = sumMoney - intoMoneyDe;
+                SqlCommand cm3 = new SqlCommand("UPDATE tblOrder SET sumMoney = " + sumMoneyNew + " WHERE codeOrder = '" + txtCodeOrder.Text + "'", function.conn);
+                cm3.ExecuteNonQuery();
+                txtSumMoney.Text = sumMoneyNew.ToString();
+                
+                loadDataGridView();
+            }
+        }
+
+        // Xoá hoá đơn
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xoá hoá đơn này không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                int quantity, quantityNew, quantityDe;
+                DataTable tableUpdate = function.getData("SELECT codeProduct ,quantity FROM tblOrderDetails WHERE codeOrder = '" + txtCodeOrder.Text + "'");
+                for (int row = 0; row <= tableUpdate.Rows.Count - 1; row++)
+                {
+                    quantity = Convert.ToInt32(function.getValue("SELECT quantity FROM tblProduct WHERE codeProduct = '" + tableUpdate.Rows[row][0].ToString() + "'"));
+                    quantityDe = Convert.ToInt32(tableUpdate.Rows[row][1].ToString());
+                    quantityNew = quantity + quantityDe;
+
+                    SqlCommand cm = new SqlCommand("UPDATE tblProduct SET quantity = " + quantityNew + " WHERE codeProduct = '" + tableUpdate.Rows[row][0].ToString() + "'", function.conn);
+                    cm.ExecuteNonQuery();
+                }
+
+                SqlCommand cm2 = new SqlCommand("DELETE tblOrderDetails WHERE codeOrder = '" + txtCodeOrder.Text + "'", function.conn);
+                cm2.ExecuteNonQuery();
+
+
+                SqlCommand cm3 = new SqlCommand("DELETE tblOrder WHERE codeOrder = '" + txtCodeOrder.Text + "'", function.conn);
+                cm3.ExecuteNonQuery();
+                loadDataGridView();
+                empty();
+                btnDelete.Enabled = false;
+                btnPrintOrder.Enabled = false;
+            }
         }
     }
 }
