@@ -48,7 +48,7 @@ namespace shop_flycam.control
             table = function.getData("SELECT a.codeProduct, a.nameProduct, b.quantity, b.unitPrice, b.intoMoney FROM tblProduct AS a, tblOrderDetails AS b WHERE a.codeProduct = b.codeProduct AND b.codeOrder = '" + txtCodeOrder.Text + "'");
             dgvOrder.DataSource = table;
             dgvOrder.Columns[0].HeaderText = "Mã flycam";
-            dgvOrder.Columns[1].HeaderText = "Tên hàng";
+            dgvOrder.Columns[1].HeaderText = "Tên flycam";
             dgvOrder.Columns[2].HeaderText = "Số lượng";
             dgvOrder.Columns[3].HeaderText = "Đơn giá";
             dgvOrder.Columns[4].HeaderText = "Thành tiền";

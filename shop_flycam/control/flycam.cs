@@ -41,13 +41,14 @@ namespace shop_flycam.control
 
             table = function.getData("SELECT * FROM tblProduct");
             dgvFlycam.DataSource = table;
-            dgvFlycam.Columns[0].HeaderText = "Mã sản phẩm";
-            dgvFlycam.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvFlycam.Columns[0].HeaderText = "Mã flycam";
+            dgvFlycam.Columns[1].HeaderText = "Tên flycam";
             dgvFlycam.Columns[2].HeaderText = "Số lượng";
             dgvFlycam.Columns[3].HeaderText = "Giá nhập";
             dgvFlycam.Columns[4].HeaderText = "Giá bán";
             dgvFlycam.Columns[5].HeaderText = "Ghi chú";
             dgvFlycam.Columns[6].HeaderText = "Ảnh";
+            dgvFlycam.Columns[7].HeaderText = "Thông tin";
         }
 
         // Set các textbox rỗng
@@ -56,6 +57,7 @@ namespace shop_flycam.control
             txtCodeProduct.Text = string.Empty;
             txtNameProduct.Text = string.Empty;
             txtConment.Text = string.Empty;
+            txtInfoFlycam.Text = string.Empty;
             txtPriceInput.Text = string.Empty;
             txtPriceOutput.Text = string.Empty;
             txtQuantity.Text = string.Empty;
@@ -105,6 +107,7 @@ namespace shop_flycam.control
             string priceInput = txtPriceInput.Text.Trim();
             string priceOutput = txtPriceOutput.Text.Trim();
             string comment = txtConment.Text.Trim();
+            string info = txtInfoFlycam.Text.Trim();
             string pathPhoto = txtPathPhoto.Text.Trim();
             
             if (table.Rows.Count == 0)
@@ -142,8 +145,13 @@ namespace shop_flycam.control
                 MessageBox.Show("Bạn chưa nhập giá bán flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            
-            SqlCommand cm = new SqlCommand("UPDATE tblProduct SET nameProduct = N'" + nameProduct + "', quantity = " + quantity + ", inputPrice = " + priceInput + ", outPrice = " + priceOutput + ", comment = N'" + comment + "', image = '" + pathPhoto + "' WHERE codeProduct = '" + codeProduct + "'", function.conn);
+            if (info == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập thông tin flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            SqlCommand cm = new SqlCommand("UPDATE tblProduct SET nameProduct = N'" + nameProduct + "', quantity = " + quantity + ", inputPrice = " + priceInput + ", outPrice = " + priceOutput + ", comment = N'" + comment + "', image = '" + pathPhoto + "', infoFlycam = N'" + info + "' WHERE codeProduct = '" + codeProduct + "'", function.conn);
             cm.ExecuteNonQuery();
 
             loadDataGridView();
@@ -206,6 +214,7 @@ namespace shop_flycam.control
             string priceInput = txtPriceInput.Text.Trim();
             string priceOutput = txtPriceOutput.Text.Trim();
             string comment = txtConment.Text.Trim();
+            string info = txtInfoFlycam.Text.Trim();
             string pathPhoto = txtPathPhoto.Text.Trim();
             string sql = "SELECT codeProduct FROM tblProduct WHERE codeProduct = '" + codeProduct + "'";
             
@@ -239,13 +248,18 @@ namespace shop_flycam.control
                 MessageBox.Show("Bạn chưa chọn ảnh flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            if (info == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập thông tin flycam.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (function.isExistKey(sql))
             {
                 MessageBox.Show("Mã flycam " + codeProduct + " đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            SqlCommand cm = new SqlCommand("INSERT INTO tblProduct VALUES('" + codeProduct + "', N'" + nameProduct + "', " + quantity + ", " + priceInput + ", " + priceOutput + ", N'" + comment + "', '" + pathPhoto + "')", function.conn);
+            SqlCommand cm = new SqlCommand("INSERT INTO tblProduct VALUES('" + codeProduct + "', N'" + nameProduct + "', " + quantity + ", " + priceInput + ", " + priceOutput + ", N'" + comment + "', '" + pathPhoto + "', N'" + info + "')", function.conn);
             cm.ExecuteNonQuery();
             loadDataGridView();
             empty();
@@ -267,6 +281,7 @@ namespace shop_flycam.control
             txtPriceOutput.Text = dgvFlycam.CurrentRow.Cells["outPrice"].Value.ToString();
             txtConment.Text = dgvFlycam.CurrentRow.Cells["comment"].Value.ToString();
             txtPathPhoto.Text = dgvFlycam.CurrentRow.Cells["image"].Value.ToString();
+            txtInfoFlycam.Text = dgvFlycam.CurrentRow.Cells["infoFlycam"].Value.ToString();
             //MessageBox.Show(dgvProduct.CurrentRow.Cells["image"].Value.ToString());
             picBoxProduct.Image = Image.FromFile(txtPathPhoto.Text);
             enabledBtn(false, true, true, false, true, true);
@@ -313,13 +328,14 @@ namespace shop_flycam.control
             }
             table = function.getData("SELECT * FROM tblProduct WHERE codeProduct LIKE '%" + txtSearch.Text + "%' OR nameProduct LIKE '%" + txtSearch.Text + "%'");
             dgvFlycam.DataSource = table;
-            dgvFlycam.Columns[0].HeaderText = "Mã sản phẩm";
-            dgvFlycam.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvFlycam.Columns[0].HeaderText = "Mã flycam";
+            dgvFlycam.Columns[1].HeaderText = "Tên flycam";
             dgvFlycam.Columns[2].HeaderText = "Số lượng";
             dgvFlycam.Columns[3].HeaderText = "Giá nhập";
             dgvFlycam.Columns[4].HeaderText = "Giá bán";
             dgvFlycam.Columns[5].HeaderText = "Ghi chú";
             dgvFlycam.Columns[6].HeaderText = "Ảnh";
+            dgvFlycam.Columns[7].HeaderText = "Thông tin";
             btnCancel.Enabled = true;
         }
     }

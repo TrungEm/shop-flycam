@@ -49,13 +49,13 @@ namespace shop_flycam.form
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.order = new shop_flycam.control.order();
             this.user = new shop_flycam.control.user();
             this.salesman = new shop_flycam.control.salesman();
             this.buyer = new shop_flycam.control.buyer();
             this.flycam = new shop_flycam.control.flycam();
             this.dashboard = new shop_flycam.control.dashboard();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
